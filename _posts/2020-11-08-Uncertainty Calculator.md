@@ -8,6 +8,8 @@ tags: [軟體製作, Qt, C++] # TAG names should always be lowercase
 img_path: assets/img/Uncertainty%20Calculator/
 ---
 
+搬運自原部落格
+
 ## 專案連結
 
 原始碼：[https://github.com/C-W-Z/UncertaintyCalculator](https://github.com/C-W-Z/UncertaintyCalculator)

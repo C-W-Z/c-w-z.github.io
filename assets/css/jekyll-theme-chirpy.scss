@@ -11,10 +11,41 @@
 @import url('font/lxgwwenkai-regular.css');
 
 :root {
+    --selected-color: #c0e4dc4b;
     --bs-highlight-bg: #ccc541;
+    --scrollbar-bg-color: #1b1b1e;
+    --scrollbar-color: #717070;
+    --scrollbar-hover-color: #919191;
 }
 html[data-mode=light] {
     --bs-highlight-bg: #fff3cd;
+}
+
+/* selected styles */
+::selection {
+    background: var(--selected-color);
+}
+::-moz-selection {
+    background: var(--selected-color);
+}
+
+/* scrollbar styles */
+::-webkit-scrollbar {
+    height: 0.5rem;
+    width: 0.5rem;
+    background: var(--scrollbar-bg-color);
+}
+::-webkit-scrollbar-track {
+    border-radius: 0;
+    background: var(--scrollbar-bg-color);
+}
+::-webkit-scrollbar-thumb {
+    background: var(--scrollbar-color);
+    border-radius: 0.2rem;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: var(--scrollbar-hover-color);
+    border-radius: 0.2rem;
 }
 
 #sidebar {
@@ -23,13 +54,18 @@ html[data-mode=light] {
     // }
 }
 
+#panel-wrapper .panel-heading {
+    font-family: 'EB Garamond', 'LXGW Bold', 'Microsoft-Yahei';
+    font-size: 1.2rem;
+}
+
 main {
     h1 {
-        font-family: 'EB Garamond', 'Caudex', 'Ubuntu', 'LXGW Bold', 'Microsoft-Yahei';
+        font-family: 'EB Garamond', 'LXGW Bold', 'Microsoft-Yahei';
         font-weight: 700;
     }
     h2 {
-        font-family: 'EB Garamond', 'Caudex', 'LXGW Bold', 'Microsoft-Yahei';
+        font-family: 'EB Garamond', 'LXGW Bold', 'Microsoft-Yahei';
         position: relative;
     }
     h2::before {
@@ -48,6 +84,10 @@ main {
     p a {
         font-family: 'Ubuntu', 'LXGW Light', 'Microsoft-Yahei';
     }
+}
+
+#archives a {
+    font-family: 'Caudex', 'LXGW Regular', 'Microsoft-Yahei';
 }
 
 .txt-r {
