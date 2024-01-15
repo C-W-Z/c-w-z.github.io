@@ -2,13 +2,15 @@
 #
 # Check for changed posts
 
-Jekyll::Hooks.register :posts, :post_init do |post|
+# Hooks are not working on Github pages
 
-  commit_num = `git rev-list --count HEAD "#{ post.path }"`
+# Jekyll::Hooks.register :posts, :post_init do |post|
 
-  if commit_num.to_i > 1
-    lastmod_date = `git log -1 --pretty="%ad" --date=iso "#{ post.path }"`
-    post.data['last_modified_at'] = lastmod_date
-  end
+#   commit_num = `git rev-list --count HEAD "#{ post.path }"`
 
-end
+#   if commit_num.to_i > 1
+#     lastmod_date = `git log -1 --pretty="%ad" --date=iso "#{ post.path }"`
+#     post.data['last_modified_at'] = lastmod_date
+#   end
+
+# end
