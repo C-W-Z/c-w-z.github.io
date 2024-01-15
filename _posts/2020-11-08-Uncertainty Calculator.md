@@ -1,14 +1,17 @@
 ---
 title: Uncertainty Calculator
 date: 2020-11-08 11:40:00 +0800
+last_modified_at: 2020-12-5 08:00:00 +0800
 categories: [軟體製作, Qt]
-tags: [軟體製作] # TAG names should always be lowercase
+tags: [軟體製作, Qt, C++] # TAG names should always be lowercase
 img_path: assets/img/Uncertainty%20Calculator/
 ---
 
 ## 專案連結
 
-原始碼：https://github.com/C-W-Z/UncertaintyCalculator
+原始碼：[https://github.com/C-W-Z/UncertaintyCalculator](https://github.com/C-W-Z/UncertaintyCalculator){: target="_blank" }
+
+版本下載：[https://github.com/C-W-Z/UncertaintyCalculator/releases](https://github.com/C-W-Z/UncertaintyCalculator/releases){: target="_blank" }
 
 ## 前言
 
@@ -67,7 +70,7 @@ _註：EC是Evaluation of measurement uncertainty Calculator的簡寫。_
 
 <p class="clr-gray"><em>更新於 2020/11/10</em></p>
 
-<p class="clr-red">重大更新！！！</p>
+<p class="clr-red"><strong>重大更新！！！</strong></p>
 
 1.3版本新增了不確定度的加減乘除運算，以後不用再自己用小算盤慢慢照著公式按啦！
 
@@ -75,7 +78,22 @@ _註：EC是Evaluation of measurement uncertainty Calculator的簡寫。_
 
 ![Uncertainty Calculator v1.3](5.PNG){: .left }
 
-<<最後附上一張圖
+<< 最後附上一張圖
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
 
 其實，如果你想把它當成一般的計算機來用也是完全沒問題的(笑哭)
 
