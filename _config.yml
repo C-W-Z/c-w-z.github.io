@@ -14,9 +14,9 @@ timezone: Asia/Taipei
 # jekyll-seo-tag settings › https://github.com/jekyll/jekyll-seo-tag/blob/master/docs/usage.md
 # ↓ --------------------------
 
-title: CWZ's Blog # the main title
+title: 'C-W-Z' # the main title
 
-tagline: 有一個CWZ # it will display as the sub-title
+tagline: 有一些CWZ # it will display as the sub-title
 
 description: >- # used by seo meta and the atom feed
   張宸瑋的個人網站

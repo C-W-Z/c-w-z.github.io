@@ -4,3 +4,13 @@
 @import 'main';
 
 /* append your custom style below */
+
+@import url('font/lxgwwenkai-bold.css');
+@import url('font/lxgwwenkai-light.css');
+@import url('font/lxgwwenkai-regular.css');
+
+#sidebar {
+    // .site-title, .site-subtitle, ul li.nav-item {
+    font-family: 'Caudex', 'LXGW Bold';
+    // }
+}
