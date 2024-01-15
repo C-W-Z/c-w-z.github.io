@@ -11,6 +11,39 @@
 
 #sidebar {
     // .site-title, .site-subtitle, ul li.nav-item {
-    font-family: 'Caudex', 'LXGW Bold';
+    font-family: 'Caudex', 'LXGW Bold', 'Microsoft-Yahei';
     // }
+}
+
+main {
+    h1 {
+        font-family: 'EB Garamond', 'Caudex', 'Ubuntu', 'LXGW Bold', 'Microsoft-Yahei';
+    }
+    h2 {
+        font-family: 'EB Garamond', 'Caudex', 'LXGW Bold', 'Microsoft-Yahei';
+        position: relative;
+    }
+    h2::before {
+        content: '§';
+        font-family: 'EB Garamond', 'Microsoft-Yahei';
+        position: absolute;
+        left: -0.7em;
+        top: -0.06em;
+    }
+    p {
+        font-family: 'LXGW Light', 'Poppins', 'Microsoft-Yahei';
+    }
+}
+
+.txt-r {
+    text-align: right;
+}
+.clr-red {
+    color: red;
+}
+.clr-gold {
+    color: #ffa400;
+}
+.clr-gray {
+    color: #999999;
 }
