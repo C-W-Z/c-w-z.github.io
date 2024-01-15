@@ -5,9 +5,17 @@
 
 /* append your custom style below */
 
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
 @import url('font/lxgwwenkai-bold.css');
 @import url('font/lxgwwenkai-light.css');
 @import url('font/lxgwwenkai-regular.css');
+
+:root {
+    --bs-highlight-bg: #ccc541;
+}
+html[data-mode=light] {
+    --bs-highlight-bg: #fff3cd;
+}
 
 #sidebar {
     // .site-title, .site-subtitle, ul li.nav-item {
@@ -31,8 +39,14 @@ main {
         left: -0.7em;
         top: -0.06em;
     }
-    p {
-        font-family: 'LXGW Light', 'Poppins', 'Microsoft-Yahei';
+    h3 {
+        font-family: 'Caudex', 'LXGW Bold', 'Microsoft-Yahei';
+    }
+    p, ul {
+        font-family: 'LXGW Regular', 'Poppins', 'Microsoft-Yahei';
+    }
+    p a {
+        font-family: 'Ubuntu', 'LXGW Light', 'Microsoft-Yahei';
     }
 }
 
@@ -43,7 +57,7 @@ main {
     color: red;
 }
 .clr-gold {
-    color: #ffa400;
+    color: #ffaa00;
 }
 .clr-gray {
     color: #999999;

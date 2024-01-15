@@ -1,7 +1,8 @@
 ---
 title: Uncertainty Calculator
+subtitle: 搬運自原部落格
 date: 2020-11-08 11:40:00 +0800
-last_modified_at: 2020-12-5 08:00:00 +0800
+last_modified_at: 2020-12-05 08:00:00 +0800
 categories: [軟體製作, Qt]
 tags: [軟體製作, Qt, C++] # TAG names should always be lowercase
 img_path: assets/img/Uncertainty%20Calculator/
@@ -9,9 +10,9 @@ img_path: assets/img/Uncertainty%20Calculator/
 
 ## 專案連結
 
-原始碼：[https://github.com/C-W-Z/UncertaintyCalculator](https://github.com/C-W-Z/UncertaintyCalculator){: target="_blank" }
+原始碼：[https://github.com/C-W-Z/UncertaintyCalculator](https://github.com/C-W-Z/UncertaintyCalculator)
 
-版本下載：[https://github.com/C-W-Z/UncertaintyCalculator/releases](https://github.com/C-W-Z/UncertaintyCalculator/releases){: target="_blank" }
+版本下載：[https://github.com/C-W-Z/UncertaintyCalculator/releases](https://github.com/C-W-Z/UncertaintyCalculator/releases)
 
 ## 前言
 
