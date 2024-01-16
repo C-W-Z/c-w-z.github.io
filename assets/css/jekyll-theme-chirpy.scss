@@ -49,9 +49,7 @@ html[data-mode=light] {
 }
 
 #sidebar {
-    // .site-title, .site-subtitle, ul li.nav-item {
     font-family: 'Caudex', 'LXGW Bold', 'Microsoft-Yahei';
-    // }
 }
 
 #panel-wrapper .panel-heading {
@@ -66,6 +64,7 @@ main {
     }
     h2 {
         font-family: 'EB Garamond', 'LXGW Bold', 'Microsoft-Yahei';
+        font-weight: 500;
         position: relative;
     }
     h2::before {
@@ -95,6 +94,36 @@ main {
     font-family: 'Caudex', 'LXGW Regular', 'Microsoft-Yahei';
 }
 
+#about-links {
+    svg {
+        fill:var(--text-color);
+        height:1em;
+        width:1rem;
+    }
+    a {
+        text-decoration: none;
+        border-bottom: none;
+        margin-right: 0.5em;
+        user-select: none;
+    }
+    a:hover svg {
+            fill:var(--sidebar-active-color);
+    }
+}
+
+#about-meta {
+    time, em, a {
+        color: var(--text-muted-hightlight-color);
+        font-weight: 600;
+        border-bottom: none;
+    }
+    span+span::before {
+        content: "•";
+        padding-left: 0.25rem;
+        padding-right: 0.25rem;
+    }
+}
+
 /* custom classes used in markdown */
 .txt-r {
     text-align: right;
@@ -107,17 +136,4 @@ main {
 }
 .clr-gray {
     color: #999999;
-}
-
-
-#about-links {
-    .svg-inline {
-        fill:var(--text-color);
-        height:1em;
-        width:1rem;
-    }
-    a {
-        text-decoration: none;
-        border-bottom: none;
-    }
 }
