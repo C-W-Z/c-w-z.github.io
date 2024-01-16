@@ -30,6 +30,14 @@ github:
 
 # twitter:
 #   username: twitter_username # change to your twitter username
+#   card: summary
+
+facebook:
+  # app_id: 1234 # a Facebook app ID for Facebook insights
+  publisher: "https://www.facebook.com/profile.php?id=100029275070963"
+  admins: "https://www.facebook.com/profile.php?id=100029275070963"
+
+logo: 'assets/img/avatar.webp'
 
 social:
   # Change to your full name.
@@ -45,6 +53,8 @@ social:
     - https://www.linkedin.com/in/chen-wei-zhang
 
 google_site_verification: # fill in to your verification string
+
+locale: zh-TW
 
 # ↑ --------------------------
 # The end of `jekyll-seo-tag` settings

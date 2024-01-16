@@ -1,6 +1,7 @@
 ---
 title: 大一上修課心得
-subtitle: 台大資工的修課心得第一彈
+description: 就是我在台大資工大一上的修課心得
+author: cwz
 date: 2023-06-11 19:30:00 +0800
 last_modified_at: 2023-06-12 12:00:00 +0800
 categories: [修課心得, 台大資工]
@@ -8,6 +9,8 @@ tags: [修課心得, 台大資工] # TAG names should always be lowercase
 ---
 
 台大資工的修課心得第一彈
+
+搬運自原部落格
 
 ## 共同必修
 

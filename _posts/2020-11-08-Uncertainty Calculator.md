@@ -1,6 +1,7 @@
 ---
 title: Uncertainty Calculator
-subtitle: 搬運自原部落格
+description: 用Qt和C++做一個不確定度計算機吧
+author: cwz
 date: 2020-11-08 11:40:00 +0800
 last_modified_at: 2020-12-05 08:00:00 +0800
 categories: [軟體製作, Qt]
@@ -8,7 +9,7 @@ tags: [軟體製作, Qt, C++] # TAG names should always be lowercase
 img_path: assets/img/Uncertainty%20Calculator/
 ---
 
-搬運自原部落格
+搬運自很久以前的部落格
 
 ## 專案連結
 

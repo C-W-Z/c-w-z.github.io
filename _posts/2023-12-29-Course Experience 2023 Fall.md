@@ -1,6 +1,7 @@
 ---
 title: 大二上修課心得
-subtitle: 大概是休克心得，修24學分我要死了
+description: 大概是休克心得，修24學分我要死了
+author: cwz
 date: 2023-12-29 12:00:00 +0800
 last_modified_at: 2024-01-12 12:00:00 +0800
 categories: [修課心得, 台大資工]
@@ -8,6 +9,8 @@ tags: [修課心得, 台大資工] # TAG names should always be lowercase
 ---
 
 大概是休克心得，修24學分我要死了
+
+搬運自原部落格
 
 ## 共同必修
 

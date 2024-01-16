@@ -1,8 +1,9 @@
 ---
 title: 用Jekyll模板製作個人網站
-subtitle: 關於我自己把個人網站搬到這個用Jekyll模板做的網站的經歷
+description: 關於我自己把個人網站搬到這個用Jekyll模板做的網站的經歷
+author: cwz
 date: 2024-01-16 13:15:33 +0800
-last_modified_at: 2024-01-16 13:15:33 +0800
+last_modified_at: 2024-01-16 16:19:37 +0800
 categories: [個人網站]
 tags: [Jekyll, Chirpy] # TAG names should always be lowercase
 ---
@@ -120,7 +121,8 @@ Copyright (c) 2021 Cotes Chung
 
 如果你想要使用GPL或其他LICENSE也可以，但要保留它原本的LICENSE。
 
-註：GitHub Repo的License跟文章的License可以是不同的。
+> 註：GitHub Repo的License跟文章的License可以是不同的。
+{: .prompt-info }
 
 有不懂得請爬文，我自己也是看stackoverflow上的文章(但其實不保證我是對的)。
 
@@ -138,7 +140,7 @@ Copyright (c) 2021 Cotes Chung
 
 因為那個功能來自一個插件，你應該可以看到`_plugins\posts-lastmod-hook.rb`，但可惜的是hook在GitHub Pages上不起作用。
 
-解決辦法，手動在每個post的Front Matter中加上`last_modified_at: YYYY-MM-DD HH:MM:SS +/-TTTT`。
+解決辦法：手動在每個post的Front Matter中加上`last_modified_at: YYYY-MM-DD HH:MM:SS +/-TTTT`。
 
 #### 為什麼我GitHub Action會Build失敗？
 
@@ -170,3 +172,21 @@ run: |
 方法一：手動在每個`[description](link)`後面都加上`{: target="_blank" }`。
 
 方法二：安裝[Jekyll Target Blank插件](https://github.com/keithmifsud/jekyll-target-blank)，安裝方法它的[GitHub頁面](https://github.com/keithmifsud/jekyll-target-blank)有說。
+
+#### 如何設定SEO？
+
+請見[Jekyll SEO Tag](https://github.com/jekyll/jekyll-seo-tag)。
+
+我還參考了[改善 SEO 的幾種方法](https://ktinglee.github.io/how-improve-jekyll-seo/)。
+
+使用[Google Search Console](https://search.google.com/search-console/)和[Google Rich Results Test](https://search.google.com/test/rich-results)。
+
+#### 如何使用自己想要的字體？
+
+[Chirpy官網的教學](https://chirpy.cotes.page/posts/getting-started/#customizing-stylesheet)其實有寫，剩下的就是怎麼寫SCSS了，這是語法問題，不過我發現大部分CSS的語法在SCSS都可以用(至少目前沒發現不能用的)。
+
+至於Chirpy產生的HTML element有哪些class和id，這個我是直接到網站上去用Chrome的開發人員工具(按`F12`)看的。
+
+#### 你用的是什麼字體？怎麼這麼好看
+
+中文我用的是[霞鶩文楷](https://github.com/lxgw/LxgwWenKai)，英文是很多種[Google Font](https://fonts.google.com/)，例如[Caudex](https://fonts.google.com/specimen/Caudex)和[EB Garamond](https://fonts.google.com/specimen/EB+Garamond)。
