@@ -33,11 +33,11 @@ html[data-mode=light] {
 ::-webkit-scrollbar {
     height: 0.5rem;
     width: 0.5rem;
-    background: var(--scrollbar-bg-color);
+    background: transparent;
 }
 ::-webkit-scrollbar-track {
     border-radius: 0;
-    background: var(--scrollbar-bg-color);
+    background: transparent;
 }
 ::-webkit-scrollbar-thumb {
     background: var(--scrollbar-color);
@@ -74,7 +74,7 @@ main {
         left: -0.7em;
         top: -0.06em;
     }
-    h3 {
+    h3, h4, h5, h6 {
         font-family: 'Caudex', 'LXGW Bold', 'Microsoft-Yahei';
     }
     p, ul {
