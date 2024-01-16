@@ -108,15 +108,15 @@ bundle exec jekyll serve # 或 bundle exec jekyll s
 
 ## Q&A
 
-#### 為什麼選擇Jekyll？
+### 為什麼選擇Jekyll？
 
 [Hugo](https://gohugo.io/)和[Hexo](https://hexo.io/)雖然也都是不錯的選擇，但是我不喜歡[Chocolatey](https://chocolatey.org/)。然而在Windows上用Hugo最簡單的方式就是裝Chocolatey；Hexo使用[Node.js](https://nodejs.org/)，也有可能會用到Chocolatey(裝Node.js時它會說有些套件需要Chocolatey才能用，建議安裝)。
 
-#### 為什麼選擇Chirpy？
+### 為什麼選擇Chirpy？
 
 很單純的原因：因為它很好看。
 
-#### 我是用它的Starter Template/從它的GitHub fork過來，那MIT License可以改嗎？
+### 我是用它的Starter Template/從它的GitHub fork過來，那MIT License可以改嗎？
 
 確切來說，不能改，但是可以(且應該)加上你自己的License，如果你決定使用MIT Lincense，只要加上一行即可。
 
@@ -135,23 +135,23 @@ Copyright (c) 2021 Cotes Chung
 
 有不懂得請爬文，我自己也是看stackoverflow上的文章(但其實不保證我是對的)。
 
-#### 如果我想改文章預設的在頁尾的MIT License怎麼做？頁尾的`Using the Chirpy theme for Jekyll.`怎麼弄掉？
+### 如果我想改文章預設的在頁尾的MIT License怎麼做？頁尾的`Using the Chirpy theme for Jekyll.`怎麼弄掉？
 
 要改`_data/locales/[lang].yml`(沒有就去[Chirpy的GitHub](https://github.com/cotes2020/jekyll-theme-chirpy)下載)，其中`[lang]`是`_config.yml`中`lang`的值(預設是`en`)
 
-#### 左邊的Sidebar我想要不只有`Categories`，`Tags`，`Archives`，`About`這四個Page怎麼辦？
+### 左邊的Sidebar我想要不只有`Categories`，`Tags`，`Archives`，`About`這四個Page怎麼辦？
 
 在`_tabs/`底下新增一個`<page name>.md`，`<page name>`是你想要的名字，Front Matter參考`_tabs/about.md`。
 
 同樣，如果想要把已有的page刪掉，只要把`_tabs/`底下對應的markdown檔案刪掉再重新編譯即可。
 
-#### 為什麼我的文章沒有顯示Last Modified Time？
+### 為什麼我的文章沒有顯示Last Modified Time？
 
 因為那個功能來自一個插件，你應該可以看到`_plugins\posts-lastmod-hook.rb`，但可惜的是hook在GitHub Pages上不起作用。
 
 解決辦法：手動在每個post的Front Matter中加上`last_modified_at: YYYY-MM-DD HH:MM:SS +/-TTTT`。
 
-#### 為什麼我GitHub Action會Build失敗？
+### 為什麼我GitHub Action會Build失敗？
 
 我自己遇到的問題是文章中包含了`Http`連結，然後它就跟我說
 
@@ -176,13 +176,13 @@ run: |
 ```
 {: file='.github\workflows\pages-deploy.yml' }
 
-#### 怎麼讓所有的外部連結都在新分頁開啟？
+### 怎麼讓所有的外部連結都在新分頁開啟？
 
 方法一：手動在每個`[description](link)`後面都加上`{: target="_blank" }`。
 
 方法二：安裝[Jekyll Target Blank插件](https://github.com/keithmifsud/jekyll-target-blank)，安裝方法它的[GitHub頁面](https://github.com/keithmifsud/jekyll-target-blank)有說。
 
-#### 如何設定SEO？
+### 如何設定SEO？
 
 請見[Jekyll SEO Tag](https://github.com/jekyll/jekyll-seo-tag)。
 
@@ -190,12 +190,12 @@ run: |
 
 使用[Google Search Console](https://search.google.com/search-console/)和[Google Rich Results Test](https://search.google.com/test/rich-results)。
 
-#### 如何使用自己想要的字體？
+### 如何使用自己想要的字體？
 
 [Chirpy官網的教學](https://chirpy.cotes.page/posts/getting-started/#customizing-stylesheet)其實有寫，剩下的就是怎麼寫SCSS了，這是語法問題，不過我發現大部分CSS的語法在SCSS都可以用(至少目前沒發現不能用的)。
 
 至於Chirpy產生的HTML element有哪些class和id，這個我是直接到網站上去用Chrome的開發人員工具(按`F12`)看的。
 
-#### 你用的是什麼字體？怎麼這麼好看
+### 你用的是什麼字體？怎麼這麼好看
 
 中文我用的是[霞鶩文楷](https://github.com/lxgw/LxgwWenKai)，英文是很多種[Google Font](https://fonts.google.com/)，例如[Caudex](https://fonts.google.com/specimen/Caudex)和[EB Garamond](https://fonts.google.com/specimen/EB+Garamond)。

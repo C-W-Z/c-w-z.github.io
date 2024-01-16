@@ -56,6 +56,10 @@ html[data-mode=light] {
     }
 }
 
+#panel-wrapper .post-tag:hover {
+    background: var(--bs-primary);
+}
+
 /* selected styles */
 ::selection {
     background: var(--selected-color);
@@ -120,8 +124,12 @@ main {
     }
 }
 
-#search-hints .post-tag, #tags a {
-    font-family: 'Ubuntu', 'LXGW Light', 'Microsoft-Yahei';
+#search-hints a.post-tag, #tags a {
+    font-family: 'Ubuntu', 'LXGW Regular', 'Microsoft-Yahei';
+}
+#tags a::before {
+    content: "#";
+    color: var(--text-muted-color);
 }
 
 #search-results h2 a, .post-navigation p, #related-posts .card h4, .panel-heading {
@@ -138,7 +146,7 @@ main {
 }
 
 #topbar #breadcrumb, #panel-wrapper a {
-    font-family: 'Ubuntu', 'LXGW Bold', 'Microsoft-Yahei';
+    font-family: 'Ubuntu', 'LXGW Regular', 'Microsoft-Yahei';
 }
 
 #tail-wrapper .btn.btn-outline-primary {
