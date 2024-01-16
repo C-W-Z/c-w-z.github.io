@@ -80,16 +80,22 @@ main {
     }
     p, ul {
         font-family: 'LXGW Regular', 'Poppins', 'Microsoft-Yahei';
+        line-height: 1.9em;
+        letter-spacing: 0.03em;
     }
     p a {
         font-family: 'Ubuntu', 'LXGW Light', 'Microsoft-Yahei';
     }
+    code.highlighter-rouge {
+        font-family: Consolas, monospace;
+    }
 }
 
-#archives a {
+#archives a, #page-category a, #page-tag a {
     font-family: 'Caudex', 'LXGW Regular', 'Microsoft-Yahei';
 }
 
+/* custom classes used in markdown */
 .txt-r {
     text-align: right;
 }
