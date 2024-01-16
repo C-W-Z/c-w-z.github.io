@@ -14,11 +14,46 @@
     --selected-color: #c0e4dc4b;
     --bs-highlight-bg: #ccc541;
     --scrollbar-bg-color: #1b1b1e;
-    --scrollbar-color: #717070;
-    --scrollbar-hover-color: #919191;
+    --scrollbar-color: #717070dd;
+    --scrollbar-hover-color: #919191dd;
+}
+.btn-outline-primary {
+    --bs-btn-color: #2a2c2d;
+    --bs-btn-border-color: #2a2c2d;
+    --bs-btn-hover-color: #f5f5f5;
+    --bs-btn-hover-bg: #2a2c2d;
+    --bs-btn-hover-border-color: #2a2c2d;
+    --bs-btn-focus-shadow-rgb: #2a2c2d;;
+    --bs-btn-active-color: #f5f5f5;
+    --bs-btn-active-bg: #2a2c2d;
+    --bs-btn-active-border-color: #2a2c2d;
+    --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+    --bs-btn-disabled-color: #2a2c2d;
+    --bs-btn-disabled-bg: transparent;
+    --bs-btn-disabled-border-color: #2a2c2d;
+    --bs-gradient: none;
 }
 html[data-mode=light] {
     --bs-highlight-bg: #fff3cd;
+    .btn-outline-primary {
+        --bs-btn-color: #f6f6f6;
+        --bs-btn-border-color: #f6f6f6;
+        --bs-btn-hover-color: #2a2a2a;
+        --bs-btn-hover-bg: #f6f6f6;
+        --bs-btn-hover-border-color: #f6f6f6;
+        --bs-btn-focus-shadow-rgb: #f6f6f6;;
+        --bs-btn-active-color: #2a2a2a;
+        --bs-btn-active-bg: #f6f6f6;
+        --bs-btn-active-border-color: #f6f6f6;
+        --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+        --bs-btn-disabled-color: #f6f6f6;
+        --bs-btn-disabled-bg: transparent;
+        --bs-btn-disabled-border-color: #f6f6f6;
+        --bs-gradient: none;
+    }
+    .post-navigation .btn:hover:before {
+        color: var(--bs-btn-hover-color);
+    }
 }
 
 /* selected styles */
@@ -52,11 +87,6 @@ html[data-mode=light] {
     font-family: 'Caudex', 'LXGW Bold', 'Microsoft-Yahei';
 }
 
-#panel-wrapper .panel-heading {
-    font-family: 'EB Garamond', 'LXGW Bold', 'Microsoft-Yahei';
-    font-size: 1.2rem;
-}
-
 main {
     h1 {
         font-family: 'EB Garamond', 'LXGW Bold', 'Microsoft-Yahei';
@@ -82,16 +112,37 @@ main {
         line-height: 1.9em;
         letter-spacing: 0.03em;
     }
-    p a {
-        font-family: 'Ubuntu', 'LXGW Light', 'Microsoft-Yahei';
+    p a, .categories a, .categories .text-muted, #archives a {
+        font-family: 'Ubuntu', 'LXGW Regular', 'Microsoft-Yahei';
     }
     code.highlighter-rouge {
         font-family: Consolas, monospace;
     }
 }
 
-#archives a, #page-category a, #page-tag a {
-    font-family: 'Caudex', 'LXGW Regular', 'Microsoft-Yahei';
+#search-hints .post-tag, #tags a {
+    font-family: 'Ubuntu', 'LXGW Light', 'Microsoft-Yahei';
+}
+
+#search-results h2 a, .post-navigation p, #related-posts .card h4, .panel-heading {
+    font-family: 'EB Garamond', 'LXGW Bold', 'Microsoft-Yahei';
+}
+
+#search-results>article, #related-posts .card p {
+    font-family: 'LXGW Regular', 'Poppins', 'Microsoft-Yahei';
+}
+
+#panel-wrapper .panel-heading {
+    font-family: 'EB Garamond', 'LXGW Bold', 'Microsoft-Yahei';
+    font-size: 1.2rem;
+}
+
+#topbar #breadcrumb, #panel-wrapper a {
+    font-family: 'Ubuntu', 'LXGW Bold', 'Microsoft-Yahei';
+}
+
+#tail-wrapper .btn.btn-outline-primary {
+    border: none;
 }
 
 #about-links {
