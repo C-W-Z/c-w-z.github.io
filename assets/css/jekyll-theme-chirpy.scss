@@ -108,3 +108,16 @@ main {
 .clr-gray {
     color: #999999;
 }
+
+
+#about-links {
+    .svg-inline {
+        fill:var(--text-color);
+        height:1em;
+        width:1rem;
+    }
+    a {
+        text-decoration: none;
+        border-bottom: none;
+    }
+}
