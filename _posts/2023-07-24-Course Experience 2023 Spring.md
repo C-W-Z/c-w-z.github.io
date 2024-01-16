@@ -8,9 +8,9 @@ categories: [修課心得, 台大資工]
 tags: [修課心得, 台大資工] # TAG names should always be lowercase
 ---
 
-台大資工的修課心得第二彈
-
 搬運自原部落格
+
+台大資工的修課心得第二彈
 
 ## 共同必修
 

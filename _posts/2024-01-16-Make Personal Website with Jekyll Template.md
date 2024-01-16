@@ -6,9 +6,10 @@ date: 2024-01-16 13:15:33 +0800
 last_modified_at: 2024-01-16 16:19:37 +0800
 categories: [個人網站]
 tags: [Jekyll, Chirpy] # TAG names should always be lowercase
+pin: true
 ---
 
-關於我自己把個人網站搬到這個用Jekyll模板做的網站的經歷。
+關於我自己把[舊的個人網站](https://c-w-z.github.io/)搬到這個用Jekyll模板做的網站的經歷。
 
 > 僅限在Windows 10上，其他OS我不能保證正確，且未來版本更新也可能會有所不同
 {: .prompt-warning }
@@ -106,6 +107,14 @@ bundle exec jekyll serve # 或 bundle exec jekyll s
 關於Chirpy的markdown文章語法請見：[Text and Typography](https://github.com/cotes2020/jekyll-theme-chirpy/blob/master/_posts/2019-08-08-text-and-typography.md)
 
 ## Q&A
+
+#### 為什麼選擇Jekyll？
+
+[Hugo](https://gohugo.io/)和[Hexo](https://hexo.io/)雖然也都是不錯的選擇，但是我不喜歡[Chocolatey](https://chocolatey.org/)。然而在Windows上用Hugo最簡單的方式就是裝Chocolatey；Hexo使用[Node.js](https://nodejs.org/)，也有可能會用到Chocolatey(裝Node.js時它會說有些套件需要Chocolatey才能用，建議安裝)。
+
+#### 為什麼選擇Chirpy？
+
+很單純的原因：因為它很好看。
 
 #### 我是用它的Starter Template/從它的GitHub fork過來，那MIT License可以改嗎？
 

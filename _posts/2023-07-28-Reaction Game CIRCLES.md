@@ -8,9 +8,9 @@ categories: [遊戲製作, Web]
 tags: [遊戲製作, Web, HTML5, CSS, TypeScript] # TAG names should always be lowercase
 ---
 
-關於我做了一個反應網頁遊戲這檔事
-
 搬運自原部落格
+
+關於我做了一個反應網頁遊戲這檔事
 
 ## 遊戲連結
 
