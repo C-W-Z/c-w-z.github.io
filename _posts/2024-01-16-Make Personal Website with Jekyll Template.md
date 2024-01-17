@@ -6,7 +6,6 @@ date: 2024-01-16 13:15:33 +0800
 last_modified_at: 2024-01-16 16:19:37 +0800
 categories: [個人網站]
 tags: [Jekyll, Chirpy] # TAG names should always be lowercase
-pin: true
 ---
 
 關於我自己把[舊的個人網站](https://c-w-z.github.io/)搬到這個用Jekyll模板做的網站的經歷。

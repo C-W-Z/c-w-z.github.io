@@ -1,0 +1,448 @@
+---
+title: Game Programming - Time Factory
+description: 我在台大資工的系選修課遊戲設計Game Programming的修課紀錄。
+author: cwz
+date: 2024-01-17 10:06:17 +0800
+last_modified_at: 2024-01-17 21:49:49 +0800
+categories: [遊戲製作, Unity]
+tags: [遊戲製作, 修課心得, 台大資工, Unity, CSharp] # TAG names should always be lowercase
+---
+
+我在台大資工的系選修課 -- 遊戲設計 Game Programming的修課紀錄。
+
+## 遊戲本體
+
+目前已經放在[itch.io](https://icya.itch.io/time-factory)上作為免費遊戲。
+
+## 修課反思
+
+### 計畫很重要
+
+我們暑假就開始討論要做什麼類型的遊戲，當時決定了幾個選項，結果到開學還是沒能確定。直到第二次上課前才決定要做跟時間暫停有關的跑庫解謎遊戲。
+
+製作過程中我們也常常遇到很多源自於沒有計畫好的問題。例如：主角要不要能攻擊？要有小怪嗎？時間能量可以自動回復嗎？要有回復道具嗎？
+
+這些都是在過程中才慢慢想好的，有些甚至到最後也沒能決定好，只是暫時先選一個方案來做。
+
+我覺得如果當初能夠先把整個遊戲定性好，計畫好，一切都會更有效率。
+
+除此之外，工作的分配也是問題。因為我們四個都是資工系，所以或多或少都有寫程式，雖然大部分(也許有接近一半？)的Script都是我寫的。
+
+但實際上一個小體量的遊戲應該是不需要4個人寫程式的，還有同樣重要的Level Design、特效、聲音等等。
+
+我們的素材大部分是來自[itch.io](https://itch.io/)，少部分是我和文乂畫的，然後聲音和特效是完全交給9mao負責。
+
+但Level Design和製作基本上是我們誰想到什麼就加上什麼(但主要還是Slimlix和文乂做的)，沒有統一的規劃。
+
+工作分配和計畫不周全導致有時候會有人不知道該做什麼，這真的是滿大的問題。
+
+### 合作與溝通
+
+我們合作的方法是用git，除了master之外每個人一個branch，在自己的branch上做事然後再Merge到master上。
+
+一個系統(e.g. Dialogue System, Player Control)的Script最好交給一個人做就好，可以減少看別人Code的時間，然後再把不同的系統組合起來(每個系統會有一些Public Function和Getter作為API)。
+
+你注意到的細節，別人不一定會注意到，所以注意到就直接說出來，不要以為別人一定會知道。
+
+例如說發現別人的檔名有typo，不是不能改，但要先溝通好，大家都Merge之後再改。或者是別人做了關卡之後你覺得某些Tile沒放好，你就去改它，但不如直接告訴那個人，並且問問他的想法看是真的放錯還是故意的，否則他下次做關卡時還是可能會做一樣的事。
+
+另外，我們覺得以後合作可能需要一個人負責Pull Request，管理所有的Commit會更好。不過也不一定，因為Unity的Scene(`.unity`)檔案每次Merge的時候如果Conflit根本看不出來Conflit的到底是什麼地方(所以每個Scene同時只能有一個人動)。
+
+### 先求有再求好
+
+老師一開始就說，先把你們的遊戲做到可玩，不要一開始就做太多花裡胡哨的功能或畫面，專精於你遊戲的特色，把那5分鐘(或者是你預計的遊戲時長)做到完美。
+
+例如如果你的遊戲是一個跑酷遊戲，理所當然地，角色操控的手感就非常重要，除此之外關卡的設計也需要多加琢磨。
+
+其次是演出，所謂的美術、音樂、特效和遊戲畫面，其實都只是對於遊戲內核的精美包裝。最後才是那些其它的裝飾(例如VFX和SFX之類的)或功能(例如按鍵設定、存檔功能)。
+
+這堂課第一次的報告是講述你的遊戲計畫，說明你遊戲的重點，什麼類型？遊戲時長？特色是什麼？不需要講大家都懂的東西，例如你要怎麼做背包系統，除非你的背包系統和市面上的有很大的不同。
+
+第二次報告就是做出一個遊戲的Prototype，也就是原型，原型不需要美術，你完全可以用方形、圓形的圖片表示遊戲中的物件和元素，但是重點是要能讓別人分清楚什麼圖案/顏色是什麼東西，以及你遊戲要怎麼玩，賣點是什麼？。據說業界很多投資商都會依據原型判斷你的遊戲有沒有~~前~~錢途。
+
+接下來就是第一次Playtest，然後逐漸把你的遊戲做完整，這堂課總共有3次Playtest以及最後的期末展演。我們這組還有參加[112 臺灣大專院校創意遊戲設計競賽](https://igd.gamelab.com.tw/)，最後拿到最佳創意獎的佳作(除了年度風雲獎和數碼未來之星獎以外，所有獎都只有一個優等和一個佳作)。
+
+順道一提，最佳創意獎的優等真的很有創意，他們的遊戲是：玩家每次輪迴的動作(按鍵操控)會被記錄下來，之後的輪迴就會有數個影子做你之前輪迴的事情，你輪迴幾次就會同時有幾個影子，每個影子做你在對應的輪迴做的事，並且每一關有一個輪迴次數上限。
+
+這樣說可能有點抽象，具體的例子例如說，某一關的出口很高，解法是需要用一個輪迴跑到箱子底下，然後下一個輪迴把箱子推到上個輪迴的影子頭上，最後站到箱子上達到出口。
+
+#### Play Test
+
+修了這一門課，我才知道Playtest有多有用，首先人數越多越好，越符合目標客群越好，也可以向專業人士詢問意見。
+
+所謂的遊玩測試就是為了避免閉門造車，向大家蒐集意見，改進你的遊戲。
+
+不過其實比起在學校做的Playtest，還是在最後1/6在比賽賽場上，大家以及評審來玩我們遊戲時給的意見更多更有用。
+
+評審說了很多問題，例如說顏色的意義不明確，時間能量不能回復會造成難度有一個Cliff，沒辦法適合大部分人，以及我們的遊戲最後的Boss戰打破了之前的規則(Boss不能被時停)，玩家也沒用到什麼遊玩過程學會的技能等。
+
+不過最後一點還是我們遊戲關卡太少的原因，教授說我們遊戲現在太跳沒關係，至少先有幾個節點，之後在慢慢把中間的補齊，讓遊戲曲線更平滑。
+
+#### 善用已有的資源
+
+如果你以前就有做過遊戲，可以把之前的程式拿來用，可以節省不少時間，例如說我們的Dialougue System就是9mao把以前他做的版本搬過來，然後再稍作修改而已。當然，這需要你平常在寫Code的時候就要注意把程式寫得容易復用才行。
+
+除此之外，美術和音樂等如果時間或資金不夠的話，適當的選擇用免費素材也沒有問題，畢竟我們的定位本來就偏向免費遊戲。
+
+然後Unity也有提供很多資源/功能，只是資源太多有時候反而不知道而已，如果想實現什麼複雜的功能，可以先了解你用的遊戲引擎或者是網路上有什麼資源。
+
+#### 堅持
+
+這可能是要做好遊戲最重要的一點，想做遊戲的人通常是腦袋裡會常常冒出新點子的人，像我自己就是。
+
+一開始做遊戲的時候，會很興奮，很有熱情，直到遊戲做到一定完整度時達到巔峰，但當你開始做一些重複或者比較枯燥的工作時，例如做關卡，熱情就會慢慢減退，而且腦袋裡又會冒出新的遊戲想法，導致很想去做新遊戲。但是，這正是需要堅持的時候，如果你去做新遊戲，就半途而廢了，這樣是永遠也做不完一個遊戲的。
+
+## 遊戲技術
+
+遊戲技術有很多，要想好需不需要，以及要不要用。當然，就算不了解技術細節其實也不太影響做遊戲，但是至少要知道怎麼使用這些技術。
+
+這裡主要是紀錄大致有哪些技術或領域，畢竟現在網路上的資源很多，但有時候不是查不到，是不知道要查什麼。
+
+### Game Engine
+
+市面上有很多很多遊戲引擎，最有名的應該是[Unity](https://unity.com/)、[Unreal](https://www.unrealengine.com/)和[Godot](https://godotengine.org/)，有時候不一定要用最厲害的，應該選最適合的。
+
+這個最適合可能有很多評判標準，例如：如果你做的是一個簡單的RPG小遊戲，[RPG Maker](https://www.rpgmakerweb.com/)可能會比Unity更適合你。不過我們選擇Unity的原因是因為我們4個人都有用Unity的經驗，可以省去學習的時間成本。
+
+### Scheduler
+
+現在的遊戲引擎大多都支援Multitasking，不過我們自己是用Single的線呈，也就是同一時間只有一個人在做事。
+
+不管是Multi還是Single，遊戲中每個函式的執行順序你最好都要弄清楚，並且確定那是你要的順序。這非常重要，否則可能會發生很多bug。
+
+例如我們遊戲角色的死亡重生的函式就遇到過這種問題，因為我們是用Unity中的Coroutine去寫它，但卻沒弄清楚Coroutine中的yield return不同的東西之後會等到什麼時候才繼續執行，是在Update之前？Update和LateUpdate之間？畫面渲染之前還是之後？等等。
+
+### Game Control
+
+遊戲要在什麼平台上玩，手機還是電腦？要用滑鼠鍵盤還是搖桿操控？這些都是要先想好的問題。
+
+以及要怎麼實作？像Unity的Input System就有分舊版和新版，總要選擇一個來用。我是在它提供的API之上用一個class來管理Input，其他class只要從那個class取得需要的Input資訊即可。
+
+另外，要怎麼做狀態之間的轉換也需要考量，哪些事情要用Event觸發？要用Finite State Machine還是Behavior Tree還是其他的什麼？我們大部分是用簡單的Finite State Machine和Event來做，包括Unity原生的Animation Controller也是有限狀態機。
+
+### Rendering
+
+這部分的技術比較偏向電腦圖學，不過做遊戲還是需要選擇要用哪一種Rendering？怎麼Rendering？要用什麼風格？當然還要了解你用的引擎支援什麼。
+
+以Unity 2D遊戲來說，最基礎的就是要選擇用URP，HDRP，Custom SRP還是原生的Rendering Pipeline。
+
+所謂的SRP就是Scriptable Render Pipeline，所以URP和HDRP都是SRP的一種。
+
+然後可能還要選擇Global Illumination mode和Tile/Cluster Rendering等。
+
+#### 風格
+
+遊戲風格請務必要統一，這會影響到遊戲的整體觀感，尤其是如果你使用別人的素材，千萬不要用風格相差太大的。
+
+如果是3D遊戲的話，風格大致可以分為Photorealistic和Non-Photorealistic，其中Photorealistic又分為Image-based和Physic-based Rendering兩種。甚至現在很多動畫其實都會配合遊戲引擎來做，畫師只負責最重要的部分(例如臉)。
+
+#### Rendering Order
+
+Rendering Order，也就是要怎麼決定每個物件誰在前誰在後，例如最簡單算法的就是Painter Algorithm(當然這個演算法也有一些做不到的事情)。
+
+Unity中判斷Sprite的遮蔽關係有個依據，優先級在[Unity Doc: 2D Sorting](https://docs.unity3d.com/Manual/2DSorting.html)裡有寫。
+
+#### 坐標系
+
+要了解你用的遊戲引擎是使用哪一種坐標系(例如是左手還是右手座標系？)，才知道要怎麼做坐標系轉換，因為建模軟體的坐標系可能和引擎的坐標系不同。還有你的遊戲中坐標系跟螢幕位置的對應關係，Camera要怎麼設定等等，都要去了解。
+
+如果你做的是比較特別視角和座標的遊戲，例如：Isometric、Hexagonal，也要注意Script中和畫面上座標的轉換。
+
+#### Ray-Tracing
+
+Ray-tracing通常是用在光影系統，光要怎麼反射、散射？要做幾次反射？打到不同的材質上要有什麼不同？Global的光源要是什麼樣？這是一門很大的學問，我自己也不甚了解，所以就不多說了。
+
+### Camera
+
+Camera是遊戲演出非常重要的組成部分，甚至會影響到角色操控的手感。什麼時候要讓Camera移動、放大縮小、切換等等都需要考量。
+
+例如有些遊戲Boss戰前可能會有一段演出，這時候角色是不能操控的，就可以在畫面周圍加上邊框，讓玩家感覺到這是在觀看演出，不是該操控角色的時間。
+
+3D遊戲的Camera又會更複雜，因為可能會有很多死角，這些死角都要額外手動設定一個Camera，才能做到最好的遊戲畫面的體驗。
+
+### Game Physic
+
+要不要使用遊戲引擎裡的物理引擎？還是要自己寫？這都是選擇。
+
+遊戲的物理通常不會跟現實一樣，例如很多遊戲的Jump，上升和下落的速度會不同，就是為了提升操控手感，一切的物理基本上都是為遊戲體驗服務。
+
+同時，如果你要用遊戲引擎裡的物理系統，也要了解具體怎麼用，例如Unity的物理相關函式最好都要在FixedUpdate裡調用，還有它的Layer和Collider、Rigidbody的選擇等，好像很多遊戲的主角都會用Kinematic作為Rigidbody的模式，主角跟所有物件的互動都由自己來寫。
+
+舉例來說，碰撞時要發生什麼？速度太快穿透怎麼辦？這些都是可以思考的問題。
+
+### Game AI
+
+遊戲的AI跟一般的AI例如Alpha Go、Chat GPT都不同，遊戲AI是為了遊戲體驗服務的，Alpha Go只會破壞你的遊戲(下棋)體驗，顯然不能算是合格的遊戲AI。
+
+遊戲AI有很多演算法，例如State Machine、Behavior Tree，還有些像Path finding或者是用Unity內建的Navigator這樣有特定用途的算法等等。
+
+不過這些還是要有具體的例子才能決定，像上面說的，我們的遊戲AI是用簡單的狀態機做的。
+
+### Visual Effect
+
+Visual Effect包括很多，跟Rendering也有重疊的部分。
+
+例如說，各種Anti-aliasing技術的選擇。像我們因為做的是像素風格的遊戲，所以是完全不用anti-aliasing的。
+
+還有遊戲景深、Post-Processing、Particle System等等。例如我們遊戲的時停效果是模仿JoJo裡的ザ・ワールド(za warudo)，做成類似反色調的世界一樣，這就是用Shader加上Post-Processing完成的。
+
+### Sound Effect
+
+一個完整的遊戲，是要有音樂和各種音效，才能夠提高玩家的沉浸感。而這些就會用到Sound Effect。
+
+例如，當你在撥放音效時，背景音樂要怎麼辦？，常見的做法是用Ducking，讓背景音樂的音量在放音效時降低，以凸顯音效。
+
+在Unity中，有內建的Audio Mixer可以做到混和音效和加上各種Sound Effect，例如剛才說的Duck，還有Low Pass、High Pass、Echo、Distortion等。
+
+### Network
+
+為什麼一個遊戲需要Network？大致可以分為4種原因：
+1. Multiplayer
+2. Save/Load & Vertify
+3. Social
+4. Other
+
+並且只要用到Network，就都要解決一些問題，例如資料傳輸格式和加密等等，這些都是要好好考量的事情。
+
+#### Multiplayer
+
+這沒什麼好說的，現代的多人遊戲通常都需要網路，除非你可以讓2個玩家在同一個電腦上一起玩(例如分別使用左右邊的鍵盤)。
+
+如果要做連線多人遊戲的話，首先要解決的問題就是幀同步(Frame Synchronization)。如果想了解的話可以查Lockstep Protocol、Bucket Synchronization等等。
+
+除了幀同步以外，還有狀態同步、Asynchronous function call怎麼辦之類的問題
+
+基本上要考慮的問題包括但不限於：每個人要看到一樣的東西(例如Random結果要一致、Floating Point精確度問題等)、如果有人的電腦跑得特別慢怎麼處理、Server要做Simulation再傳給Clients還是只做Authority？要做Client-side Prediction(先對下一幀發生的事做預測)嗎？
+
+#### Save/Load & Vertify
+
+Save/Load說實話，其實不一定要用到網路，只不過現在的遊戲為了更好的保存玩家的遊戲紀錄(也可能是增加玩家刪檔或棄遊的成本？)，通常會用到網路。有些遊戲為了增加沉浸感，就讓一個帳號只能有一個存檔(或者說現在的手遊大概都是這樣)。
+
+而Vertify有很多種，舉例來說，帳號密碼的確認和每日登錄要確定時間是否正確就需要網路。
+
+#### Social
+
+社交當然也需要網路，如果你想在遊戲裡加上排行榜、加好友、聊天等功能，就會用上。
+
+### Performance Optimization
+
+需要考慮的東西大致上有：
+1. Memory Usage
+2. CPU Usage
+3. GPU Usage
+4. Network Usage
+5. Power Usage
+
+然後Unity有一個功能叫做Profiler，可以看你遊戲執行的時候實際花了多少資源，如果是做遊戲的新手，最常遇到的問題就是GC用太多Memory，或者是Script太沒效率(以60 FPS來說，1秒60幀代表一幀的運算要在16ms內完成才不會卡頓)。
+
+以下列出一些主要可以改善的地方。
+
+#### Memory Usage
+
+##### Texture format
+
+例如少用Alpha Channel，渲染透明的東西其實很花資源。
+
+##### Texture compression
+
+首先圖片大小最好是2的倍數，甚至有些引擎或目標平台例如手機可能會限制你只能用什麼樣大小/比例的圖片。
+
+##### Mipmap
+
+舉例來說，同張圖片在不同距離/大小下應該看起來是怎麼樣的？
+
+Mipmap就是不同距離/大小下同張圖片看起來的樣子。
+
+##### Audio compression
+
+音樂通常檔案很大，但其實大部分遊戲都不需要那麼高的音質，壓縮後一般人也聽不出差別。
+
+#### CPU Usage
+
+##### Garbage Collection
+
+例如C#會自動幫你把Memory free掉，減少GC次數的方法就是減少Allocate memory的次數，例如少用new的使用(如果new的是struct就沒差，例如Vector3)。
+
+##### Object Pooling
+
+物件池，也就是先預生成會用到的數量的物件，然後要用時從物件池拿，用完再放回去，不要一直生成和刪除物件。
+
+#### GPU Usage
+
+##### Number of draw calls
+
+減少渲染次數。例如同樣顏色的Button，Unity其實會分2次渲染。解決方法是使用Sprite Packer(Atlas)，將Texture合併，如果用的是同樣的Material和Shader，Unity就可以在一次Draw call裡渲染多個物件。
+
+而且Unity的UGUI是以Canvas為單位渲染的，只要Canvas裡有東西動了，就會整個Canvas重畫一遍。例如如果你在聊天室軟體中加上了動態的表情符號，所耗的效能可能就會大大上升。適度的切割Canvasc或使用Canvas Group會更好。
+
+然後不會動的東西可以勾選static，這樣Unity就可以做precomputation，提升效能。
+
+另外，建模的Vertices/Faces數量也需要和效能做權衡，Mesh的點/面數越多雖然看起來會越逼真，但也要花越多效能。
+
+##### Fill rate
+
+Fill rate指的是GPU渲染的效率，例如pixel fill rate就是GPU每秒可以畫多少像素。
+
+而要降低每秒畫的像素量，就是只畫必要的畫面，例如可以做Culling，畫面以外的物件就不要渲染，被擋住的物件也不需要渲染。
+
+## 遊戲發布 & 製作流程
+
+### 遊戲開發規模
+
+1. 3A(AAA)：通常要數億成本，達到400人以上，定價新台幣1600元以上。
+2. 2A(AA)；約50~100人的規模，定價在新台幣800~1600元左右
+3. 獨立遊戲(Indie Game)：通常20人以下，甚至單人開發，定價多在新台幣800元以下。
+
+> 以小團隊的獨立遊戲來說，一年的開發期可能要賣上萬套才有機會打平
+
+### 遊戲開發流程
+
+常見的遊戲開發流程是：
+
+1. 前期製作 (pre-production)
+2. 量產 (production)
+3. 發布 (launch)
+4. 營運 (operation)
+
+### 前期製作
+
+前期製作的目標是培養團隊的共同認知：
+
+1. 目標客群 (target audience)
+2. 世界觀 (world bulding)
+3. 劇本大綱
+4. 尺規 (metrics)
+5. 協作方式等等
+
+#### 決定目標客群 Target Audience
+
+1. 發布平台 (publishing platform)
+2. 遊戲類型 (game type)
+3. 營運模式 (business model)
+4. 文化/地域 (culture/region)
+5. 美術風格 (art style)
+
+##### Platform
+
+選擇你的遊戲要在什麼平台上玩，當然也可以選多平台，但多平台要做的事情會有很多，例如OS如果跟你的遊戲不太相容，也許要重寫另一個版本的遊戲，再來就是Input要用什麼，多平台的遊戲就要做到支持不同方式的Input：鍵鼠、觸控、搖桿等等。
+
+螢幕的Resolution也是一個很麻煩的問題，要調整你的UI讓他可以符合所有的平台(其實很難)，或對不同平台做不同的UI。
+
+除此之外，還有Performance、Testing、Porting等問題要解決，我真的很佩服做多平台的人(光做一個平台就能磨滅我的熱情了XD)。
+
+##### 遊戲類型
+
+1. 箱庭 (sandbox)
+2. 即時戰略 (RTS)
+3. 射擊 (shooters)
+4. 多人線上戰鬥競技場 (MOBA)
+5. 角色扮演 RPG
+6. 模擬 (simulation)
+7. 運動 (sports)
+8. 解謎 (puzzlers)
+9. 策略 (strategy)
+10. 派對 (party games)
+11. 動作冒險 (action-adventure)
+12. 生存 (survival)
+13. 恐怖 (horror)
+14. 平台 (platformer)
+15. 博弈 (game of chance)
+16. 成人 (18+)
+17. 還有更多...
+
+##### 營運模式
+
+1. 買斷
+2. 買斷+資料片(DLC)
+3. 免費(F2P)+廣告(in-app advertizing)
+4. 免費(F2P)+內購(in-app purchases)：永久性商品或消耗型商品
+5. 訂閱(subscription)：月卡制、點數卡
+
+##### 美術風格
+
+1. 概念美術(Concept Art)：Midjourney？
+2. 直接進入市場：直接發廣告試試看回饋？
+
+#### 前期製作的驗證手段
+
+1. 建立原型 (prototyping)
+   
+   最前面的章節我有提到，不過其實也不一定要真的做出一個遊戲，可以用Storyboard、Colorkey、Greybox，Previz之類或者拿剪紙來演示也可以，重點是要能動起來，並讓別人知道你的遊戲在幹嘛。
+
+2. 建立垂直切片 (vertical slice)
+3. 遊玩測試 (playtest)
+
+### 發布
+
+遊戲做到最後，就可以選擇要不要發布了，像我們只是放在[itch.io](https://icya.itch.io/time-factory)上作為免費遊戲。但如果你想要給你的遊戲一個更加轟轟烈烈的結尾，就可以考慮以下的事情。
+
+> 警告：我對這些也不甚了解，所以發布和營運這兩個章節大部分是來自於上課簡報
+> (其實上面很多也是來自簡報，但加上了我自己的理解)
+{: .prompt-danger }
+
+1. Marketing & Public relationship
+2. User Acquition
+3. Launch
+4. Hotfix
+5. Analytics
+
+#### 最小化風險
+
+- 不好玩？做體驗評估 (experience evaluation)。
+- 賣不好？做市場分析 (market analysis)
+- 做不完？做專案管理 (project management)
+
+#### Publishing Issue
+
+1. 身分：個人/公司 (還有稅務問題)
+2. 管道：自行申請/透過發行商
+3. 費用：抽程與持續上架費用
+4. 語言：Multi-lingual？
+5. Marketing/Public Relationship
+6. Vedio Game Rating System： [每個國家的分級制度不同](https://zh.wikipedia.org/zh-tw/%E9%9B%BB%E5%AD%90%E9%81%8A%E6%88%B2%E5%88%86%E7%B4%9A%E5%88%B6%E5%BA%A6)
+7. Personal Data Protection (個資保護)：GDPR[EU]、PIPL[CN]、App Tracking Transparency？
+
+#### Publisher
+
+發行商可以做的事情有很多，包括提供經費、宣傳行銷、協助開發(例如人才媒合、本土化、測試、平台移植)，周邊商品等，同時發行商和平台的關係通常也會比個人好，有助於審核或者是有獨佔合約之類的。
+
+#### Publishing Platform
+
+要在哪個平台上發布？
+
+現在主流的PC遊戲平台包括[Steam](https://store.steampowered.com/)、[GOG](https://www.gog.com/)、[itch.io](https://itch.io/)、Microsoft Store ([XBox PC](https://www.xbox.com/))、[Epic](https://store.epicgames.com/)、WeGame等。
+
+主機(Console)的遊戲平台則有[PlayStation Store](https://store.playstation.com/)、Microsoft Store ([XBox](https://www.xbox.com/))、[Nintendo Store](https://www.nintendo.com/us/store/)等。
+
+Mobile的遊戲平台則主要是[App Store](https://www.apple.com/tw/app-store/)和[Google Play](https://play.google.com/store/)還有Tap Tap，其中App Store會有iPhone/iPad/tvOS/macOS的不同以及版本問題要解決，還有設計要求；但Android的問題也不小，具體可以參考[[2019 TGDF] Unity 手機遊戲開發防火指南 (趙峻甫)](https://youtu.be/kdnm_osNZ9s?si=PdC70cdhKmtbIsMM)。但如果手機遊戲經營得好的話，只要能上App Store和Google Play首頁或排行榜，就等於是他在免費幫你打幾百幾千萬的廣告。
+
+另外如果你想要發佈到中國的話，也會有版號、防沉迷規定、以及渠道太多太混亂的問題。
+
+至於街機(Arcade)，說實話我完全不了解XD。
+
+總而言之不管要發佈到哪個平台，最好都要事先了解相關的規定和優缺點。
+
+### 營運
+
+#### 營運要面臨的挑戰
+
+- Monetization：要怎麼實現賺錢？In-app advertizing？
+- Cheating：公平性如何實現？
+- Community：遊戲社群如何經營？
+
+#### 營運數據分析 Analytics
+
+- New player
+- Revenue
+- Copied
+- Realtime Data Processing System。
+
+##### Telemetry Report
+
+- Retantion, D1, D7, D30
+- DAU, MAU
+- ARPU, ARPPU, ARPDAU
+- K-factor
+- New User Acquition：Propensity modeling
+
+最後同樣，要善用已有的資源，例如[Unity Game Services](https://unity.com/solutions/gaming-services)有提供Analytics、Diagnotics, User Reporting, Unity Ads等等。
