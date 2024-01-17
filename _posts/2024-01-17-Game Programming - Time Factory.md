@@ -1,18 +1,18 @@
 ---
 title: Game Programming - Time Factory
-description: 我在台大資工的系選修課遊戲設計Game Programming的修課紀錄。
+description: 我在台大資工系選修課遊戲設計Game Programming的修課紀錄。
 author: cwz
 date: 2024-01-17 10:06:17 +0800
-last_modified_at: 2024-01-17 21:49:49 +0800
+last_modified_at: 2024-01-17 22:32:36 +0800
 categories: [遊戲製作, Unity]
-tags: [遊戲製作, 修課心得, 台大資工, Unity, CSharp] # TAG names should always be lowercase
+tags: [遊戲製作, 修課心得, 台大, Unity, CSharp] # TAG names should always be lowercase
 ---
 
 我在台大資工的系選修課 -- 遊戲設計 Game Programming的修課紀錄。
 
 ## 遊戲本體
 
-目前已經放在[itch.io](https://icya.itch.io/time-factory)上作為免費遊戲。
+遊戲名稱是Time Factory，目前已經放在[itch.io](https://icya.itch.io/time-factory)上作為免費遊戲。
 
 ## 修課反思
 
@@ -38,9 +38,9 @@ tags: [遊戲製作, 修課心得, 台大資工, Unity, CSharp] # TAG names shou
 
 ### 合作與溝通
 
-我們合作的方法是用git，除了master之外每個人一個branch，在自己的branch上做事然後再Merge到master上。
+我們合作的方法是用[git](https://git-scm.com/)和[GitHub](https://github.com/)，除了master之外每個人一個branch，在自己的branch上做事然後再Merge到master上。
 
-一個系統(e.g. Dialogue System, Player Control)的Script最好交給一個人做就好，可以減少看別人Code的時間，然後再把不同的系統組合起來(每個系統會有一些Public Function和Getter作為API)。
+一個系統(e.g. Dialogue System, Player Control)的Script最好交給一個人做就好，可以減少看別人Code的時間，然後再把不同的系統組合起來(每個系統都要做一些Public Function和Getter作為API)。
 
 你注意到的細節，別人不一定會注意到，所以注意到就直接說出來，不要以為別人一定會知道。
 
@@ -76,7 +76,7 @@ tags: [遊戲製作, 修課心得, 台大資工, Unity, CSharp] # TAG names shou
 
 評審說了很多問題，例如說顏色的意義不明確，時間能量不能回復會造成難度有一個Cliff，沒辦法適合大部分人，以及我們的遊戲最後的Boss戰打破了之前的規則(Boss不能被時停)，玩家也沒用到什麼遊玩過程學會的技能等。
 
-不過最後一點還是我們遊戲關卡太少的原因，教授說我們遊戲現在太跳沒關係，至少先有幾個節點，之後在慢慢把中間的補齊，讓遊戲曲線更平滑。
+不過最後一點還是我們遊戲關卡太少的原因，教授說我們遊戲現在太跳沒關係，至少先有幾個節點，之後再慢慢把中間的補齊，讓遊戲曲線更平滑(不過以後大概也不會繼續做這個遊戲了)。
 
 #### 善用已有的資源
 
@@ -84,7 +84,7 @@ tags: [遊戲製作, 修課心得, 台大資工, Unity, CSharp] # TAG names shou
 
 除此之外，美術和音樂等如果時間或資金不夠的話，適當的選擇用免費素材也沒有問題，畢竟我們的定位本來就偏向免費遊戲。
 
-然後Unity也有提供很多資源/功能，只是資源太多有時候反而不知道而已，如果想實現什麼複雜的功能，可以先了解你用的遊戲引擎或者是網路上有什麼資源。
+然後Unity也有提供很多資源/功能，只是資源太多有時候反而不知道而已，如果想實現什麼複雜的功能，可以先了解你用的遊戲引擎或者是網路上有沒有相關資源。
 
 #### 堅持
 
@@ -106,9 +106,9 @@ tags: [遊戲製作, 修課心得, 台大資工, Unity, CSharp] # TAG names shou
 
 ### Scheduler
 
-現在的遊戲引擎大多都支援Multitasking，不過我們自己是用Single的線呈，也就是同一時間只有一個人在做事。
+現在的遊戲引擎大多都支援Multitasking，不過我們自己是用Single的線程，也就是同一時間只有一個人在做事。
 
-不管是Multi還是Single，遊戲中每個函式的執行順序你最好都要弄清楚，並且確定那是你要的順序。這非常重要，否則可能會發生很多bug。
+不管是Multi還是Single，[遊戲中每個函式的執行順序](https://docs.unity3d.com/Manual/ExecutionOrder.html)你最好都要弄清楚，並且確定那是你要的順序。這非常重要，否則可能會發生很多bug。
 
 例如我們遊戲角色的死亡重生的函式就遇到過這種問題，因為我們是用Unity中的Coroutine去寫它，但卻沒弄清楚Coroutine中的yield return不同的東西之後會等到什麼時候才繼續執行，是在Update之前？Update和LateUpdate之間？畫面渲染之前還是之後？等等。
 
@@ -122,9 +122,9 @@ tags: [遊戲製作, 修課心得, 台大資工, Unity, CSharp] # TAG names shou
 
 ### Rendering
 
-這部分的技術比較偏向電腦圖學，不過做遊戲還是需要選擇要用哪一種Rendering？怎麼Rendering？要用什麼風格？當然還要了解你用的引擎支援什麼。
+這部分的技術比較偏向電腦圖學，不過做遊戲還是需要選擇要用哪一種[Rende Pipeline](https://docs.unity3d.com/Manual/render-pipelines.html)？怎麼Render？要用什麼風格？當然還要了解你用的引擎支援什麼。
 
-以Unity 2D遊戲來說，最基礎的就是要選擇用URP，HDRP，Custom SRP還是原生的Rendering Pipeline。
+以Unity遊戲來說，最基礎的就是要選擇用URP，HDRP，Custom SRP還是原生的Rendering Pipeline。
 
 所謂的SRP就是Scriptable Render Pipeline，所以URP和HDRP都是SRP的一種。
 
@@ -138,7 +138,7 @@ tags: [遊戲製作, 修課心得, 台大資工, Unity, CSharp] # TAG names shou
 
 #### Rendering Order
 
-Rendering Order，也就是要怎麼決定每個物件誰在前誰在後，例如最簡單算法的就是Painter Algorithm(當然這個演算法也有一些做不到的事情)。
+Rendering Order，也就是要怎麼決定每個物件誰在前誰在後，例如最簡單算法的就是[Painter Algorithm](https://en.wikipedia.org/wiki/Painter%27s_algorithm)(就是先畫遠的再畫近的，當然這個演算法也有一些做不到的事情，例如遇到[cyclical overlapping](https://en.wikipedia.org/wiki/Painter%27s_algorithm#Cyclical_overlapping)時就無法判斷遠近，所以要切分成不同塊才行)。
 
 Unity中判斷Sprite的遮蔽關係有個依據，優先級在[Unity Doc: 2D Sorting](https://docs.unity3d.com/Manual/2DSorting.html)裡有寫。
 
@@ -154,17 +154,17 @@ Ray-tracing通常是用在光影系統，光要怎麼反射、散射？要做幾
 
 ### Camera
 
-Camera是遊戲演出非常重要的組成部分，甚至會影響到角色操控的手感。什麼時候要讓Camera移動、放大縮小、切換等等都需要考量。
+Camera是遊戲演出非常重要的組成部分，甚至會影響到角色操控的手感。什麼時候要讓Camera移動、放大縮小、切換等等都需要考量。[Unity的Cinemachine](https://unity.com/unity/features/editor/art-and-design/cinemachine)就是一個很好用的工具。
 
-例如有些遊戲Boss戰前可能會有一段演出，這時候角色是不能操控的，就可以在畫面周圍加上邊框，讓玩家感覺到這是在觀看演出，不是該操控角色的時間。
+例如有些遊戲Boss戰前可能會有一段演出，這時候角色是不能操控的，就可以在畫面周圍加上黑色邊框，讓玩家感覺到這是在觀看演出，不是該操控角色的時間。
 
 3D遊戲的Camera又會更複雜，因為可能會有很多死角，這些死角都要額外手動設定一個Camera，才能做到最好的遊戲畫面的體驗。
 
 ### Game Physic
 
-要不要使用遊戲引擎裡的物理引擎？還是要自己寫？這都是選擇。
+要不要使用[遊戲引擎裡的物理系統](https://docs.unity3d.com/Manual/PhysicsSection.html)？還是要自己寫？這都是選擇。
 
-遊戲的物理通常不會跟現實一樣，例如很多遊戲的Jump，上升和下落的速度會不同，就是為了提升操控手感，一切的物理基本上都是為遊戲體驗服務。
+遊戲的物理通常不會跟現實一樣，例如很多遊戲的[Jump](https://youtu.be/hG9SzQxaCm8?si=UHbEeed391JXwZjk)，上升和下落的速度會不同，就是為了提升操控手感，一切的物理基本上都是為遊戲體驗服務。
 
 同時，如果你要用遊戲引擎裡的物理系統，也要了解具體怎麼用，例如Unity的物理相關函式最好都要在FixedUpdate裡調用，還有它的Layer和Collider、Rigidbody的選擇等，好像很多遊戲的主角都會用Kinematic作為Rigidbody的模式，主角跟所有物件的互動都由自己來寫。
 
@@ -172,7 +172,7 @@ Camera是遊戲演出非常重要的組成部分，甚至會影響到角色操�
 
 ### Game AI
 
-遊戲的AI跟一般的AI例如Alpha Go、Chat GPT都不同，遊戲AI是為了遊戲體驗服務的，Alpha Go只會破壞你的遊戲(下棋)體驗，顯然不能算是合格的遊戲AI。
+遊戲的AI跟一般的AI例如Alpha Go、[Chat GPT](https://chat.openai.com/)不一樣，遊戲AI是為了遊戲體驗服務的，但像Alpha Go只會破壞你的遊戲(下棋)體驗，顯然不能算是合格的遊戲AI。
 
 遊戲AI有很多演算法，例如State Machine、Behavior Tree，還有些像Path finding或者是用Unity內建的Navigator這樣有特定用途的算法等等。
 
@@ -192,7 +192,7 @@ Visual Effect包括很多，跟Rendering也有重疊的部分。
 
 例如，當你在撥放音效時，背景音樂要怎麼辦？，常見的做法是用Ducking，讓背景音樂的音量在放音效時降低，以凸顯音效。
 
-在Unity中，有內建的Audio Mixer可以做到混和音效和加上各種Sound Effect，例如剛才說的Duck，還有Low Pass、High Pass、Echo、Distortion等。
+在Unity中，有[內建的Audio Mixer](https://docs.unity3d.com/Manual/AudioMixer.html)可以做到混和音效和加上各種Sound Effect，例如剛才說的Duck，還有Low Pass、High Pass、Echo、Distortion等。
 
 ### Network
 
@@ -233,7 +233,7 @@ Save/Load說實話，其實不一定要用到網路，只不過現在的遊戲�
 4. Network Usage
 5. Power Usage
 
-然後Unity有一個功能叫做Profiler，可以看你遊戲執行的時候實際花了多少資源，如果是做遊戲的新手，最常遇到的問題就是GC用太多Memory，或者是Script太沒效率(以60 FPS來說，1秒60幀代表一幀的運算要在16ms內完成才不會卡頓)。
+然後Unity有一個功能叫做[Profiler](https://docs.unity3d.com/Manual/Profiler.html)，可以看你遊戲執行的時候實際花了多少資源，如果是做遊戲的新手，最常遇到的問題就是GC用太多Memory，或者是Script太沒效率(以60 FPS來說，1秒60幀代表一幀的運算要在16ms內完成才不會卡頓)。
 
 以下列出一些主要可以改善的地方。
 
@@ -261,7 +261,7 @@ Mipmap就是不同距離/大小下同張圖片看起來的樣子。
 
 ##### Garbage Collection
 
-例如C#會自動幫你把Memory free掉，減少GC次數的方法就是減少Allocate memory的次數，例如少用new的使用(如果new的是struct就沒差，例如Vector3)。
+例如[C#的GC](https://learn.microsoft.com/zh-tw/dotnet/standard/garbage-collection/)會自動幫你把Memory free掉，減少GC次數的方法就是減少allocate memory的次數，例如少用new的使用(如果new的是struct就沒差，例如Vector3)。
 
 ##### Object Pooling
 
@@ -271,7 +271,7 @@ Mipmap就是不同距離/大小下同張圖片看起來的樣子。
 
 ##### Number of draw calls
 
-減少渲染次數。例如同樣顏色的Button，Unity其實會分2次渲染。解決方法是使用Sprite Packer(Atlas)，將Texture合併，如果用的是同樣的Material和Shader，Unity就可以在一次Draw call裡渲染多個物件。
+減少渲染次數。例如同樣顏色的Button，Unity其實會分2次渲染。解決方法是使用[Sprite Packer(Atlas)](https://docs.unity3d.com/Manual/SpritePacker.html)，將Texture合併，如果用的是同樣的Material和Shader，Unity就可以在一次Draw call裡渲染多個物件。
 
 而且Unity的UGUI是以Canvas為單位渲染的，只要Canvas裡有東西動了，就會整個Canvas重畫一遍。例如如果你在聊天室軟體中加上了動態的表情符號，所耗的效能可能就會大大上升。適度的切割Canvasc或使用Canvas Group會更好。
 
