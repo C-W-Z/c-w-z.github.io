@@ -4,12 +4,12 @@
 icon: fas fa-info-circle
 order: 4
 date: 2023-06-18 16:30:00 +0800
-last_modified_at: 2024-01-16 09:21:00 +0800
+last_modified_at: 2024-01-17 10:06:17 +0800
 ---
 
 <div id="about-meta" class="post-meta text-muted">
     <span> Posted <time data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="Sun, Jun 18, 2023 4:30 PM">Jun 18, 2023</time> </span>
-    <span> Updated <time data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="Tue, Jan 16, 2024 9:21 AM">Jan 16, 2024</time> </span>
+    <span> Updated <time data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="Wed, Jan 17, 2024 10:06 AM">Jan 17, 2024</time> </span>
 </div>
 
 ## 張宸瑋 CHEN WEI, ZHANG
@@ -47,6 +47,45 @@ last_modified_at: 2024-01-16 09:21:00 +0800
 
 Computer Science and Information Engineering |
 **National Taiwan University** | *Sep 2022 ~ Present*
+
+## Skills
+
+#### Spoken Languages
+
+Chinese     | Native
+English     | Intermediate
+Japanese    | Beginner
+
+#### Coding Languages
+
+C           | Intermediate
+C++         | Intermediate
+C#          | Intermediate
+Python      | Intermediate
+HTML5       | Intermediate
+CSS         | Intermediate
+JavaScript  | Intermediate
+TypeScript  | Beginner
+Rust        | Beginner
+
+#### Technical
+
+Data Structures             | Intermediate
+Algorithms                  | Intermediate
+Object Oriented Programming | Intermediate
+System Programming          | Intermediate
+Unity                       | Intermediate
+Git                         | Intermediate
+GitHub                      | Intermediate
+GitHub Action               | Beginner
+Django                      | Beginner
+Qt                          | Beginner
+Jekyll                      | Beginner
+Linux                       | Beginner
+
+## Work Experience
+
+2023 [APCS Camp](https://apcs.camp/) Teaching Asistant | *Jul 2023 ~ Aug 2023*
 
 ## About Me
 
