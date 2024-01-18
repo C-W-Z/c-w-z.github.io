@@ -5,7 +5,7 @@ author: cwz
 date: 2023-12-29 12:00:00 +0800
 last_modified_at: 2024-01-16 17:31:57 +0800
 categories: [修課心得, 台大]
-tags: [修課心得, 台大] # TAG names should always be lowercase
+tags: [修課心得, 台大]
 ---
 
 搬運自原部落格

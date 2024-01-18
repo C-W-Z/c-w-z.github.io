@@ -183,6 +183,15 @@ main {
     }
 }
 
+mjx-math {
+    user-select: none;
+}
+
+.edgeLabel:not(:empty) {
+    border-radius: 5px;
+    padding: 5px;
+}
+
 /* custom classes used in markdown */
 .txt-r {
     text-align: right;

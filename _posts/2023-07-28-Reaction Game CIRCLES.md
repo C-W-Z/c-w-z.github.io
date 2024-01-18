@@ -4,8 +4,8 @@ description: 關於我做了一個反應網頁遊戲這檔事
 author: cwz
 date: 2023-07-28 12:00:00 +0800
 last_modified_at: 2023-07-30 12:00:00 +0800
-categories: [遊戲製作, Web]
-tags: [遊戲製作, Web, HTML5, CSS, TypeScript] # TAG names should always be lowercase
+categories: [遊戲開發, Web]
+tags: [遊戲開發, Web, HTML5, CSS, TypeScript]
 ---
 
 搬運自原部落格
