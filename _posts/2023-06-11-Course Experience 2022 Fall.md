@@ -4,7 +4,7 @@ description: 就是我在台大資工大一上的修課心得
 author: cwz
 date: 2023-06-11 19:30:00 +0800
 last_modified_at: 2023-06-12 12:00:00 +0800
-categories: [修課心得, 台大]
+categories: [台大, 修課心得]
 tags: [修課心得, 台大]
 ---
 

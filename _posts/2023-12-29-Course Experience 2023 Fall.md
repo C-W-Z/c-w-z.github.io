@@ -3,8 +3,8 @@ title: 大二上修課心得
 description: 大概是休克心得，修24學分我要死了
 author: cwz
 date: 2023-12-29 12:00:00 +0800
-last_modified_at: 2024-01-16 17:31:57 +0800
-categories: [修課心得, 台大]
+last_modified_at: 2024-01-19 07:26:33 +0800
+categories: [台大, 修課心得]
 tags: [修課心得, 台大]
 ---
 
@@ -53,7 +53,7 @@ tags: [修課心得, 台大]
 - 教師：黎世偉
 - 學分：3
 - 成績：A
-- 甜度：<span class="clr-gold">★★★★★★★</span>☆☆☆
+- 甜度：<span class="clr-gold">★★★★★★★★</span>☆☆
 - 涼度：<span class="clr-gold">★★★★★★</span>☆☆☆☆
 - 收穫：<span class="clr-gold">★★★★★★★★★</span>☆
 
@@ -79,8 +79,8 @@ tags: [修課心得, 台大]
 
 - 教師：呂學一
 - 學分：3
-- 成績：未知
-- 甜度：未知
+- 成績：A
+- 甜度：<span class="clr-gold">★★★★★</span>☆☆☆☆☆
 - 涼度：<span class="clr-gold">★★★★★★★★</span>☆☆
 - 收穫：<span class="clr-gold">★★★★★★★★</span>☆☆
 
@@ -124,6 +124,8 @@ tags: [修課心得, 台大]
 更：我們最後拿到[112 臺灣大專院校創意遊戲設計競賽](https://igd.gamelab.com.tw/)的最佳創新獎佳作，蒸不戳。
 
 遊戲連結：[Time Factory](https://icya.itch.io/time-factory)
+
+這們課的詳情可以看看我寫的另一篇文章：[Game Programming - 遊戲開發與商務開發]({% post_url 2024-01-17-Game Programming - Game&Business Development %})
 
 ### 前瞻資訊科技一 Computer Science and Information
 
