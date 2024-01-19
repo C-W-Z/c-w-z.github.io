@@ -4,8 +4,8 @@ description: 用Qt和C++做一個不確定度計算機吧
 author: cwz
 date: 2020-11-08 11:40:00 +0800
 last_modified_at: 2020-12-05 08:00:00 +0800
-categories: [軟體製作, Qt]
-tags: [軟體製作, Qt, C++]
+categories: [Software Development, Qt]
+tags: [Software Development, Qt, C++]
 img_path: assets/img/Uncertainty%20Calculator/
 ---
 

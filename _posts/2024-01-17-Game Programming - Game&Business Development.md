@@ -4,8 +4,8 @@ description: 我在台大資工系選修課遊戲設計Game Programming的修課
 author: cwz
 date: 2024-01-17 10:06:17 +0800
 last_modified_at: 2024-01-19 07:22:15 +0800
-categories: [台大, 修課心得]
-tags: [修課心得, 遊戲開發, 商務開發, Unity, CSharp, 台大]
+categories: [NTU, Course Experience]
+tags: [Course Experience, Game Development, Business Development, Unity, CSharp, NTU]
 math: true
 mermaid: true
 ---

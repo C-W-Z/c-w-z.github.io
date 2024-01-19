@@ -4,8 +4,8 @@ description: 就是我在台大資工大一下的修課心得
 author: cwz
 date: 2023-07-24 08:00:00 +0800
 last_modified_at: 2023-07-24 20:00:00 +0800
-categories: [台大, 修課心得]
-tags: [修課心得, 台大]
+categories: [NTU, Course Experience]
+tags: [Course Experience, NTU]
 ---
 
 搬運自原部落格

@@ -4,7 +4,7 @@ description: 關於我自己把個人網站搬到這個用Jekyll模板做的網�
 author: cwz
 date: 2024-01-16 13:15:33 +0800
 last_modified_at: 2024-01-16 16:19:37 +0800
-categories: [個人網站]
+categories: [Website]
 tags: [Jekyll, Chirpy]
 ---
 

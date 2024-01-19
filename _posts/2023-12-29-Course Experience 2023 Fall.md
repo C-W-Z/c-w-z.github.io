@@ -4,8 +4,8 @@ description: 大概是休克心得，修24學分我要死了
 author: cwz
 date: 2023-12-29 12:00:00 +0800
 last_modified_at: 2024-01-19 07:26:33 +0800
-categories: [台大, 修課心得]
-tags: [修課心得, 台大]
+categories: [NTU, Course Experience]
+tags: [Course Experience, NTU]
 ---
 
 搬運自原部落格

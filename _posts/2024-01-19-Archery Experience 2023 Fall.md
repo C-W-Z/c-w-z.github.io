@@ -4,8 +4,8 @@ description: 我在台大射箭社的初學經歷
 author: cwz
 date: 2024-01-19 11:50:03 +0800
 last_modified_at: 2024-01-19 11:50:00 +0800
-categories: [台大, 射箭]
-tags: [射箭, 台大]
+categories: [NTU, Archery]
+tags: [Archery, NTU]
 mermaid: true
 ---
 
