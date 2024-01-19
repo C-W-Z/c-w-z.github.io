@@ -197,7 +197,7 @@ Visual Effect包括很多，跟Rendering也有重疊的部分。
 
 一個完整的遊戲，是要有音樂和各種音效，才能夠提高玩家的沉浸感。而這些就會用到Sound Effect。
 
-例如，當你在撥放音效時，背景音樂要怎麼辦？，常見的做法是用Ducking，讓背景音樂的音量在放音效時降低，以凸顯音效。
+例如，當你在播放音效時，背景音樂要怎麼辦？，常見的做法是用Ducking，讓背景音樂的音量在放音效時降低，以凸顯音效。
 
 在Unity中，有[內建的Audio Mixer](https://docs.unity3d.com/Manual/AudioMixer.html)可以做到混和音效和加上各種Sound Effect，例如剛才說的Duck，還有Low Pass、High Pass、Echo、Distortion等。
 
@@ -268,7 +268,7 @@ Mipmap就是不同距離/大小下同張圖片看起來的樣子。
 
 ##### Garbage Collection
 
-例如[C#的GC](https://learn.microsoft.com/zh-tw/dotnet/standard/garbage-collection/)會自動幫你把Memory free掉，減少GC次數的方法就是減少allocate memory的次數，例如少用new的使用(如果new的是struct就沒差，例如Vector3)。
+例如[C#的GC](https://learn.microsoft.com/zh-tw/dotnet/standard/garbage-collection/)會自動幫你把Memory free掉，減少GC次數的方法就是減少allocate memory的次數，例如少用new關鍵字(如果new的是struct就沒差，例如Vector3)。
 
 ##### Object Pooling
 
@@ -300,7 +300,7 @@ Fill rate指的是GPU渲染的效率，例如pixel fill rate就是GPU每秒可�
 2. 2A(AA)；約50~100人的規模，定價在新台幣800~1600元左右
 3. 獨立遊戲(Indie Game)：通常20人以下，甚至單人開發，定價多在新台幣800元以下。
 
-> 以小團隊的獨立遊戲來說，一年的開發期可能要賣上萬套才有機會打平
+> 以小團隊的獨立遊戲來說，一年的開發期可能要賣上萬套才有機會打平。
 
 ### 遊戲開發流程
 

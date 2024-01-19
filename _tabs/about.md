@@ -94,7 +94,7 @@ Linux                       | Beginner
 
 ## About Me
 
-一個喜歡寫網頁做遊戲外加畫畫的資訊系學生。
+一個喜歡寫網頁做遊戲外加畫畫以及射箭的資訊系學生，目前是[台大射箭社](https://www.facebook.com/NTUArchery/)的社員。
 
 C W Z 就是英文名Chen-Wei, Zhang的簡寫。
 
