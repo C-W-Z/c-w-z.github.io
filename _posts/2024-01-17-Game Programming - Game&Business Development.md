@@ -3,9 +3,9 @@ title: Game Programming - 遊戲開發與商務開發
 description: 我在台大資工系選修課遊戲設計Game Programming的修課紀錄，關於遊戲開發與商務開發。
 author: cwz
 date: 2024-01-17 10:06:17 +0800
-last_modified_at: 2024-01-19 07:22:15 +0800
+last_modified_at: 2024-01-20 18:45:04 +0800
 categories: [NTU, Course Experience]
-tags: [Course Experience, Game Development, Business Development, Unity, CSharp, NTU]
+tags: [Course Experience, Game Development, Business Development, Game Techniques, Unity, CSharp, NTU]
 math: true
 mermaid: true
 ---
@@ -62,7 +62,7 @@ mermaid: true
 
 這堂課第一次的報告是講述你的遊戲計畫，說明你遊戲的重點，什麼類型？遊戲時長？特色是什麼？不需要講大家都懂的東西，例如你要怎麼做背包系統，除非你的背包系統和市面上的有很大的不同。
 
-第二次報告就是做出一個遊戲的Prototype，也就是原型，原型不需要美術，你完全可以用方形、圓形的圖片表示遊戲中的物件和元素，但是重點是要能讓別人分清楚什麼圖案/顏色是什麼東西，以及你遊戲要怎麼玩，賣點是什麼？。據說業界很多投資商都會依據原型判斷你的遊戲有沒有~~前~~錢途。或者說，如果你的原型不好玩，就算把它再做得更複雜，加上再多元素，大概也不會好玩。
+第二次報告就是做出一個遊戲的Prototype，也就是原型，原型不需要美術，你完全可以用方形、圓形的圖片表示遊戲中的物件和元素，但是重點是要能讓別人分清楚什麼圖案/顏色是什麼東西，以及你遊戲要怎麼玩，賣點是什麼？據說業界很多投資商都會依據原型判斷你的遊戲有沒有~~前~~錢途。或者說，如果你的原型不好玩，就算把它再做得更複雜，加上再多元素，大概也不會好玩。
 
 接下來就是第一次Playtest，然後逐漸把你的遊戲做完整，這堂課總共有3次Playtest以及最後的期末展演。我們這組還有參加[112 臺灣大專院校創意遊戲設計競賽](https://igd.gamelab.com.tw/)，最後拿到最佳創意獎的佳作(除了年度風雲獎和數碼未來之星獎以外，所有獎都只有一個優等和一個佳作)。很感謝李根逸教授的指導。
 
@@ -181,9 +181,38 @@ Camera是遊戲演出非常重要的組成部分，甚至會影響到角色操�
 
 遊戲的AI跟一般的AI例如Alpha Go、[Chat GPT](https://chat.openai.com/)不一樣，遊戲AI是為了遊戲體驗服務的，但像Alpha Go只會破壞你的遊戲(下棋)體驗，顯然不能算是合格的遊戲AI。
 
-遊戲AI有很多演算法，例如State Machine、Behavior Tree，還有些像Path finding或者是用Unity內建的Navigator這樣有特定用途的算法等等。
+遊戲AI有很多演算法，例如State Machine、Behavior Tree，還有些像Path finding(例如[A\*](https://en.wikipedia.org/wiki/A*_search_algorithm)、RTS用的Flow Field還有Unity內建的Navigator等)這樣有特定用途的算法等等。
 
 不過這些還是要有具體的例子才能決定，像上面說的，我們的遊戲AI是用簡單的狀態機做的。
+
+### Procedural Generation
+
+自動化/程序生成技術雖然老師上課好像只有講動畫的部分，不過我還是覺得補充一下比較好。
+
+這種技術可以生成遊戲的Map/Terrain/Dungeon/Level/Maze等，提升遊戲的隨機性和可重複遊玩性。有名的例子有[Minecraft](https://www.minecraft.net/)的地圖生成，還有大量的rougelike遊戲也都會用到，例如[The Binding of Isaac](https://store.steampowered.com/app/113200/The_Binding_of_Isaac/)和[Slay the Spire](https://store.steampowered.com/app/646570/Slay_the_Spire/)，當然，還有Rouge這個Rougelike遊戲的始祖。
+
+除了地圖之外，Procedural Generation也可以用在動畫上，創作者只要做好關鍵幀，剩下中間的其他幀就由程式來生成，可以節省很多工作量。
+
+另外，包括自動產生Dialogue、Model、Object和Loot的生成等，比較特別的還有任務的生成和技能樹的生成(就是生出那個圖)之類的，只要是透過程式產生而不是事先做好的，其實都可以算是Procedural Generation的一種。
+
+具體的演算法非常多種(你也可以把它們組合起來用)，例如：
+
+- Drunkard's Walk (又叫Random Walk)
+- [Binary Space Partition](https://en.wikipedia.org/wiki/Binary_space_partitioning) (例如NetHack)
+- Wave Function Collapse
+- Cellular Automata
+- Diffusion Limited Aggregation
+- [Perlin Noise](https://en.wikipedia.org/wiki/Perlin_noise) (例如Minecraft) & [Slimplex Noise](https://en.wikipedia.org/wiki/Simplex_noise)
+- Voronoi Diagram & [Delaunay Triangulation](https://en.wikipedia.org/wiki/Delaunay_triangulation)
+- Force Graph
+- Dijkstra Map
+- [Graph Rewriting](https://en.wikipedia.org/wiki/Graph_rewriting)(又叫Graph Grammer)
+- [Maze Generation Algorithms](https://en.wikipedia.org/wiki/Maze_generation_algorithm)
+- 還有更多......
+
+網路上也有很多介紹，例如[Herbert Wolverson - Procedural Map Generation Techniques](https://www.youtube.com/watch?v=TlLIOgWYVpI&ab_channel=RoguelikeCelebration)。
+
+還有一些可以幫助程序生成的演算法例如Steering Algorithms和可以讓你生成的東西更加平滑的[Marching Cubes](https://en.wikipedia.org/wiki/Marching_cubes)(2D版叫[Marching Square](https://en.wikipedia.org/wiki/Marching_squares))，以及大量的圖論演算法例如找[Minimum Spanning Tree](https://en.wikipedia.org/wiki/Minimum_spanning_tree)的演算法。
 
 ### Visual Effect
 
@@ -268,7 +297,7 @@ Mipmap就是不同距離/大小下同張圖片看起來的樣子。
 
 ##### Garbage Collection
 
-例如[C#的GC](https://learn.microsoft.com/zh-tw/dotnet/standard/garbage-collection/)會自動幫你把Memory free掉，減少GC次數的方法就是減少allocate memory的次數，例如少用new關鍵字(如果new的是struct就沒差，例如Vector3)。
+例如[C#的GC](https://learn.microsoft.com/dotnet/standard/garbage-collection/)會自動幫你把Memory free掉，減少GC次數的方法就是減少allocate memory的次數，例如少用new關鍵字(如果new的是struct就沒差，例如Vector3)。
 
 ##### Object Pooling
 
@@ -399,7 +428,7 @@ Fill rate指的是GPU渲染的效率，例如pixel fill rate就是GPU每秒可�
 
 1. 身分：個人/公司 (還有稅務問題)
 2. 管道：自行申請/透過發行商
-3. 費用：抽程與持續上架費用
+3. 費用：抽成與持續上架費用
 4. 語言：Multi-lingual？
 5. Marketing/Public Relationship
 6. Vedio Game Rating System： [每個國家的分級制度不同](https://zh.wikipedia.org/zh-tw/%E9%9B%BB%E5%AD%90%E9%81%8A%E6%88%B2%E5%88%86%E7%B4%9A%E5%88%B6%E5%BA%A6)
@@ -407,7 +436,7 @@ Fill rate指的是GPU渲染的效率，例如pixel fill rate就是GPU每秒可�
 
 #### Publisher
 
-發行商可以做的事情有很多，包括提供經費、宣傳行銷、協助開發(例如人才媒合、本土化、測試、平台移植)，周邊商品等，同時發行商和平台的關係通常也會比個人好，有助於審核或者是有獨佔合約之類的。
+發行商/代理商可以做的事情有很多，包括提供經費、宣傳行銷、協助開發(例如人才媒合、本土化、測試、平台移植)，周邊商品等，同時發行商和平台的關係通常也會比個人好，有助於審核或者是有獨佔合約之類的。
 
 #### Publishing Platform
 
