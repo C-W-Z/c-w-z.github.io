@@ -3,7 +3,7 @@ title: 大二上修課心得
 description: 大概是休克心得，修24學分我要死了
 author: cwz
 date: 2023-12-29 12:00:00 +0800
-last_modified_at: 2024-01-19 07:26:33 +0800
+last_modified_at: 2024-01-21 17:03:33 +0800
 categories: [NTU, Course Experience]
 tags: [Course Experience, NTU]
 ---
@@ -167,8 +167,8 @@ tags: [Course Experience, NTU]
 - 通識：A7
 - 教師：孫維新
 - 學分：2
-- 成績：未知
-- 甜度：<span class="clr-gold">★★★★★★★</span>☆☆☆
+- 成績：A+
+- 甜度：<span class="clr-gold">★★★★★★★★</span>☆☆
 - 涼度：<span class="clr-gold">★★★★★★</span>☆☆☆☆
 - 收穫：<span class="clr-gold">★★★★★★</span>☆☆☆☆
 
@@ -204,4 +204,4 @@ tags: [Course Experience, NTU]
 
 總計：65/128 (+24)
 
-本學期GPA: 未知
+本學期GPA: 4.23

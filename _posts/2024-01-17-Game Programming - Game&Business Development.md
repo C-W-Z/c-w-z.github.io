@@ -204,7 +204,7 @@ Camera是遊戲演出非常重要的組成部分，甚至會影響到角色操�
 - Diffusion Limited Aggregation
 - [Perlin Noise](https://en.wikipedia.org/wiki/Perlin_noise) (例如Minecraft) & [Slimplex Noise](https://en.wikipedia.org/wiki/Simplex_noise)
 - Voronoi Diagram & [Delaunay Triangulation](https://en.wikipedia.org/wiki/Delaunay_triangulation)
-- Force Graph
+- [Force-directed Graph Drawing](https://en.wikipedia.org/wiki/Force-directed_graph_drawing)
 - Dijkstra Map
 - [Graph Rewriting](https://en.wikipedia.org/wiki/Graph_rewriting)(又叫Graph Grammer)
 - [Maze Generation Algorithms](https://en.wikipedia.org/wiki/Maze_generation_algorithm)
