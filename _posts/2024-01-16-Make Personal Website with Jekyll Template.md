@@ -8,7 +8,7 @@ categories: [Website]
 tags: [Jekyll, Chirpy]
 ---
 
-關於我自己把[舊的個人網站](https://c-w-z.github.io/)搬到這個用Jekyll模板做的網站的經歷。
+關於我自己把[舊的個人網站](https://c-w-z.github.io/old/)搬到這個用Jekyll模板做的網站的經歷。
 
 > 僅限在Windows 10上，其他OS我不能保證正確，且未來版本更新也可能會有所不同
 {: .prompt-warning }
