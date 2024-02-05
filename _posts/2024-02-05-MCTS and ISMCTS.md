@@ -16,7 +16,7 @@ mermaid: true
 
 因為很多遊戲，例如圍棋，第一步就有$$19\times19$$種可能，想要窮盡所有策略，大約要$$361!\approx1.4\times10^{768}$$，現階段的計算機根本是不可能在正常的遊戲時長裡算出來的。所以很多搜尋演算法的根本原理就是選擇性的放棄某些遊戲分支，不要窮盡所有可能，而MCTS也是一樣。
 
-Monte Carlo的精隨在於：AI根據現在的局面和眾多可以做的行動，產生出眾多對應的下一局面，雙方在這些局面下「隨機」行動，值到遊戲結束/分出勝負為止，重複非常多次，計算勝率，勝率越高的局面對應的行動就越好。
+Monte Carlo的精隨在於：AI根據現在的局面和眾多可以做的行動，產生出眾多對應的下一局面，雙方在這些局面下「隨機」行動，直到遊戲結束/分出勝負為止，重複非常多次，計算勝率，勝率越高的局面對應的行動就越好。
 
 ## Game Definition
 
@@ -488,6 +488,7 @@ Move GetBestMove(Node root, Policy policy)
 ```
 
 最後整個MCTS可以寫成這一個函式：
+這裡要提一件事情，通常的MCTS是每次都建立一個全新的Tree，我的實作也是，但也有人是只用一個Tree，每次Search都是把該Tree的某一個Node當成Root Node開始的。
 
 ```cs
 Move Search(State state, int iteration, double UCB1ExploreParam, Policy policy)
