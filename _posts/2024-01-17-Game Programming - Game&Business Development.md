@@ -181,7 +181,7 @@ Camera是遊戲演出非常重要的組成部分，甚至會影響到角色操�
 
 遊戲的AI跟一般的AI例如AlphaGo、[Chat GPT](https://chat.openai.com/)不一樣，遊戲AI是為了遊戲體驗服務的，但像AlphaGo只會破壞你的遊戲(下棋)體驗，顯然不能算是合格的遊戲AI。
 
-遊戲AI有很多演算法，例如State Machine、Behavior Tree, MCTS(AlphaGo就是深度學習+MCTS)，還有些像Path finding(例如[A\*](https://en.wikipedia.org/wiki/A*_search_algorithm)、RTS用的Flow Field還有Unity內建的Navigator等)這樣有特定用途的算法等等。
+遊戲AI有很多演算法，例如State Machine、Behavior Tree, [MCTS]({% post_url 2024-02-05-MCTS and ISMCTS %})(AlphaGo就是深度學習+MCTS)，還有些像Path finding(例如[A\*](https://en.wikipedia.org/wiki/A*_search_algorithm)、RTS用的Flow Field還有Unity內建的Navigator等)這樣有特定用途的算法等等。
 
 不過這些還是要有具體的例子才能決定，像上面說的，我們的遊戲AI是用簡單的狀態機做的。
 
