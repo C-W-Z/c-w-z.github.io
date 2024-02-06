@@ -98,8 +98,4 @@ Linux                       | Beginner
 
 C W Z 就是英文名Chen-Wei, Zhang的簡寫。
 
-高中才開始接觸程式，目前會寫C和C++，還有一點點Python和HTML/CSS/JavaScript以及TypeScript。
-
-偶爾會用Unity和C#做遊戲。
-
-最近在嘗試Django, Rust WASM, 還有把原本的文章從自己寫的網站搬到這個用Jekyll模板做的網站。
+這個網站基本上是我自己寫學習筆記，以及一些修課心得，或分享Project成果的地方。

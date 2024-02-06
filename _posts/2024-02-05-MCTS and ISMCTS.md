@@ -1,9 +1,9 @@
 ---
 title: MCTS & ISMCTS
-description: 淺談MCTS與ISMCTS
+description: My notes of Monte Carlo Tree Search and Information Set Monte Carlo Tree Search
 author: cwz
 date: 2024-02-05 20:26:38 +0800
-last_modified_at: 2024-02-05 21:24:47 +0800
+last_modified_at: 2024-02-06 12:12:03 +0800
 categories: [Algorithm, Monte Carlo]
 tags: [AI, Algorithm, Monte Carlo, Game Techniques, CSharp]
 math: true
@@ -12,11 +12,13 @@ mermaid: true
 
 ## Introduction
 
-蒙特卡羅樹搜尋(Monte Carlo Tree Search，MCTS)，是一種適用於大部分遊戲的搜尋演算法，因為它不需要了解遊戲的規則，只要遊戲能夠被定義為一種特定的形式，就可以適用。
+蒙特卡羅樹搜尋([Monte Carlo Tree Search](#monte-carlo-tree-search)，MCTS)，是一種適用於大部分perfect information遊戲的best-first搜尋演算法，因為它不需要了解遊戲的規則，只要遊戲能夠被定義為一種特定的形式，就可以適用。
 
 因為很多遊戲，例如圍棋，第一步就有$$19\times19$$種可能，想要窮盡所有策略，大約要$$361!\approx1.4\times10^{768}$$，現階段的計算機根本是不可能在正常的遊戲時長裡算出來的。所以很多搜尋演算法的根本原理就是選擇性的放棄某些遊戲分支，不要窮盡所有可能，而MCTS也是一樣。
 
 Monte Carlo的精隨在於：AI根據現在的局面和眾多可以做的行動，產生出眾多對應的下一局面，雙方在這些局面下「隨機」行動，直到遊戲結束/分出勝負為止，重複非常多次，計算勝率，勝率越高的局面對應的行動就越好。
+
+而[Information Set MCTS](#information-set-mcts)是MCTS的變種，適用於imperfect information的遊戲，稍後再談。
 
 ## Game Definition
 
@@ -264,8 +266,7 @@ void Iterate(Node root, double UCB1ExploreParam)
 {
     Node leaf = Select(root, UCB1ExploreParam);
     Player winner = CheckWinner(leaf.state);
-    // 這裡我沒有判斷leaf是否進行過Rollout，因為我把它放在Select裡了
-    if (winner == Player.NONE) // 是否還有下一回合
+    if (winner == Player.NONE && leaf.rolloutTimes > 0)
     {
         Expand(leaf, root);
         leaf = leaf.GetRandomChild();
@@ -274,6 +275,9 @@ void Iterate(Node root, double UCB1ExploreParam)
     Backpropogate(leaf, winner);
 }
 ```
+
+![](https://upload.wikimedia.org/wikipedia/commons/2/21/MCTS-steps.svg)
+_維基百科上的MCTS的4步驟的示意圖：Node上的數字代表的是`parentPlayerScore/rolloutTimes`_
 
 #### Selection
 
@@ -531,7 +535,7 @@ ISMCTS具體和MCTS不同的地方，在於MCTS每個Node存的是一個Game Sta
 
 ### Iteration
 
-ISMCTS在每次的iteration前加上了一個步驟：Determinization，並且對其他步驟也有細微改動。
+ISMCTS在原本MCTS每次的[Iteration](#iteration)前加上了一個步驟：Determinization，並且對其他步驟也有細微改動。
 
 #### Determinization
 
@@ -555,6 +559,14 @@ ISMCTS在每次的iteration前加上了一個步驟：Determinization，並且�
 
 和MCTS一模一樣。
 
+### Multiple-Observer
+
+上面介紹的ISMCTS是Single-Observer，意思就是，我方(Root Node的Player)對敵方的資訊是用猜的，但敵方卻可以知道我方的所有資訊，因為在上面的步驟中，並沒有打亂我方資訊的步驟。
+
+所以解決的辦法也很簡單，就是在敵方的Node要執行Rollout的時候，把我方的資訊和敵方的資訊混淆一部份，具體混淆多少也是由你決定，看你想要模擬到如何精確的程度。當然Rollout結束要改回來，或者一開始一就是複製一份再混淆+Rollout。
+
+或者更徹底一點，我方的Node做事時，我方的資訊就是完全確定的；敵方的Node做事時，我方的資訊和敵方的資訊會互相混和交換一部份，這個混淆的步驟也可以在Determinization這個步驟完成，2種不同的Node就用2種不同的資訊執行ISMCTS的步驟。
+
 ## Optimization
 
 MCTS雖然並沒有窮盡所有可能，但效率依然不算特別高，如果只是迭代幾千幾萬次還好，但如果是像圍棋那樣的遊戲，可能要迭代幾十幾百萬次以上才能夠有足夠的準確度，很難在1秒內完成。
@@ -565,15 +577,20 @@ MCTS雖然並沒有窮盡所有可能，但效率依然不算特別高，如果�
 2. 事先算好Log和Sqrt的值，建立成一個表。
 3. 盡量減少複製，只在必要時複製State、Move等等。
 4. 調整分數和UCB1的常數c，使得Exploitation和Exploration更平衡。
+5. 利用Multi-threading平行化搜尋
 
 而正確性的優化，可以參考AlphaGo做的事情：把Selection和Rollout用神經網路取代。或者也可以在MCTS裡加上一點Human Experience，只不過在iteration次數很高時不一定會比隨機好，主要取決於具體怎麼改。
 
 ## Reference
+
+[Monte Carlo tree search](https://en.wikipedia.org/wiki/Monte_Carlo_tree_search)
 
 [General Game-Playing With Monte Carlo Tree Search](https://medium.com/@quasimik/monte-carlo-tree-search-applied-to-letterpress-34f41c86e238)
 
 [Monte Carlo Tree Search](https://youtu.be/UXW2yZndl7U?si=dqYNLJ75Wn0ipYqk)
 
 [Tic Tac Toe at the Monte Carlo](https://medium.com/swlh/tic-tac-toe-at-the-monte-carlo-a5e0394c7bc2)
+
+[A Reversi Playing Agent and the Monte Carlo Tree Search Algorithm](https://royhung.com/reversi)
 
 [Reducing the burden of knowledge: Simulation-based methods in imperfect information games](https://www.aifactory.co.uk/newsletter/2013_01_reduce_burden.htm)
