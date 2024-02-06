@@ -3,7 +3,7 @@ title: MCTS & ISMCTS
 description: My notes of Monte Carlo Tree Search and Information Set Monte Carlo Tree Search
 author: cwz
 date: 2024-02-05 20:26:38 +0800
-last_modified_at: 2024-02-06 12:12:03 +0800
+last_modified_at: 2024-02-06 18:23:08 +0800
 categories: [Algorithm, Monte Carlo]
 tags: [AI, Algorithm, Monte Carlo, Game Techniques, CSharp]
 math: true
