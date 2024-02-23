@@ -129,7 +129,7 @@ mermaid: true
 
 ### Rendering
 
-這部分的技術比較偏向電腦圖學，不過做遊戲還是需要選擇要用哪一種[Rende Pipeline](https://docs.unity3d.com/Manual/render-pipelines.html)？怎麼Render？要用什麼風格？當然還要了解你用的引擎支援什麼。
+這部分的技術比較偏向電腦圖學，不過做遊戲還是需要選擇要用哪一種[Render Pipeline](https://docs.unity3d.com/Manual/render-pipelines.html)？怎麼Render？要用什麼風格？當然還要了解你用的引擎支援什麼。
 
 以Unity遊戲來說，最基礎的就是要選擇用URP，HDRP，Custom SRP還是原生的Rendering Pipeline。
 
