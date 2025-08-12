@@ -3,7 +3,7 @@ title: 用Jekyll模板製作個人網站
 description: 關於我自己把個人網站搬到這個用Jekyll模板做的網站的經歷
 author: cwz
 date: 2024-01-16 13:15:33 +0800
-last_modified_at: 2024-01-16 16:19:37 +0800
+last_modified_at: 2025-08-12 20:51:00 +0800
 categories: [Website, Jekyll]
 tags: [Jekyll, Chirpy]
 ---
@@ -62,6 +62,10 @@ Windows就裝[Make for Windows](https://sourceforge.net/projects/gnuwin32/)，�
 make -v
 ```
 
+> 註：現在Windows上有更簡單的安裝方式：在powershell中執行`winget install ezwinports.make`
+> 更新於2025-08-12
+{: .prompt-info }
+
 ### 安裝Jekyll
 
 ```shell
@@ -96,6 +100,9 @@ bundle exec jekyll serve # 或 bundle exec jekyll s
 如果你對Project做了任何更動，只要儲存(例如按下`Ctrl+S`)，Jekyll就會自動幫你重新編譯，只要重新載入就可以看見變更了。
 
 想關掉該網頁只要回到剛才的cmd然後按下`Ctrl+C`即可。
+
+> 如果是舊有的專案，在第一次執行`bundle exec jekyll serve`之前要先刪除`Gemfile.lock`並執行`bundle install`
+{: .prompt-info }
 
 ## 使用模板
 
