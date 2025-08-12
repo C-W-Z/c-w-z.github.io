@@ -3,12 +3,12 @@
 icon: fas fa-info-circle
 order: 4
 date: 2023-06-18 16:30:00 +0800
-last_modified_at: 2024-02-06 13:28:23 +0800
+last_modified_at: 2025-08-12 21:24:00 +0800
 ---
 
 <div id="about-meta" class="post-meta text-muted">
     <span> Posted <time data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="Sun, Jun 18, 2023 4:30 PM">Jun 18, 2023</time> </span>
-    <span> Updated <time data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="Wed, Jan 17, 2024 10:06 AM">Jan 17, 2024</time> </span>
+    <span> Updated <time data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="Wed, Jan 17, 2024 10:06 AM">Aug 12, 2025</time> </span>
 </div>
 
 ## 張宸瑋 CHEN WEI, ZHANG
@@ -69,10 +69,11 @@ C           | Intermediate
 C++         | Intermediate
 C#          | Intermediate
 Python      | Intermediate
-HTML5       | Intermediate
-CSS         | Intermediate
-JavaScript  | Intermediate
-TypeScript  | Beginner
+TypeScript  | Intermediate
+Java        | Beginner
+HTML5       | Beginner
+CSS         | Beginner
+JavaScript  | Beginner
 Rust        | Beginner
 
 #### Technical
@@ -82,6 +83,7 @@ Algorithms                  | Intermediate
 Object Oriented Programming | Intermediate
 System Programming          | Intermediate
 Unity                       | Intermediate
+React                       | Intermediate
 Git                         | Intermediate
 GitHub                      | Intermediate
 GitHub Action               | Beginner
@@ -101,13 +103,21 @@ Entry: [Time Factory](https://icya.itch.io/time-factory) \| *Aug 2023 ~ Jan 2024
 
 ## Work Experience
 
+#### 2025 [CITI, Acedemia Sinica](https://www.citi.sinica.edu.tw/main) Summer Intern
+
+*Jun 2025 ~ Aug 2025*
+
+#### 2024 [Taiwan Space Agency](https://www.tasa.org.tw/) Summer Intern
+
+*Jul 2024 ~ Aug 2024*
+
 #### 2023 [APCS Camp](https://apcs.camp/) Teaching Asistant
 
 *Jul 2023 ~ Aug 2023*
 
 ## About Me
 
-一個喜歡寫網頁做遊戲外加畫畫以及射箭的資訊系學生，目前是[台大射箭社](https://www.facebook.com/NTUArchery/)的社員。
+一個喜歡寫網頁做遊戲外加畫畫以及射箭的資訊系學生，之前是[台大射箭社](https://www.facebook.com/NTUArchery/)的社員。
 
 C W Z 就是英文名Chen-Wei, Zhang的簡寫。
 
