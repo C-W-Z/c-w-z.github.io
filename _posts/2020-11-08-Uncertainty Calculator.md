@@ -31,15 +31,15 @@ img_path: assets/img/Uncertainty%20Calculator/
 
 給大家看一下，下載之後會是這個樣子：
 
-![Uncertainty Calculator v1.3](1.PNG)
+![Uncertainty Calculator v1.3](/assets/img/Uncertainty%20Calculator/1.PNG)
 _註：UC 是 Uncertainty Calculator 的縮寫_
 
 給大家看一下，下載之後會是這個樣子：
 
-![測量不確定度Calculator v1.1](2.PNG)
+![測量不確定度Calculator v1.1](/assets/img/Uncertainty%20Calculator/2.PNG)
 _打開之後就像這樣子(這是已經輸入數據的)(這是windows7的界面)_
 
-![關於](3.PNG){: .left }
+![關於](/assets/img/Uncertainty%20Calculator/3.PNG){: .left }
 
 用法也非常簡單，輸入數據，然後按確定就好了！
 
@@ -65,7 +65,7 @@ _打開之後就像這樣子(這是已經輸入數據的)(這是windows7的界�
 
 v1.0 和 v1.1的版本，圖示會是下面這樣，不過我覺得"Evaluation of measurement uncertainty Calculator"這個名字太長了，我打算在之後的版本改叫"Uncertainty Calculator"就好了，也就是UC。
 
-![測量不確定度Calculator v1.1](4.PNG){: .left }
+![測量不確定度Calculator v1.1](/assets/img/Uncertainty%20Calculator/4.PNG){: .left }
 _註：EC是Evaluation of measurement uncertainty Calculator的簡寫。_
 
 ｢測量不確定度Calculator｣也會改成英文｢Uncertainty Calculator｣
@@ -80,7 +80,7 @@ _註：EC是Evaluation of measurement uncertainty Calculator的簡寫。_
 
 我用了逆向波蘭表示法哦，呼~寫得超累的，目前主要的程式碼的部分已經有500行了呢，一大半都是在弄這個逆向波蘭，這次的更新裡，可以使用的運算符有：+-*/()，目前只有這些，但是以高中來講已經夠啦，像是次方什麼的公式，課本沒有講，我上網查也是眾說紛紜，所以目前只能夠用X*X*X*X*X*X這樣的東西來算了，總之我覺得嘛，這次做的真的很不錯呢，除了使用說明，我真的是懶得打，反正應該都會用吧？
 
-![Uncertainty Calculator v1.3](5.PNG){: .left }
+![Uncertainty Calculator v1.3](/assets/img/Uncertainty%20Calculator/5.PNG){: .left }
 
 << 最後附上一張圖
 
