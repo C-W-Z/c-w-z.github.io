@@ -49,8 +49,11 @@ last_modified_at: 2024-02-06 13:28:23 +0800
 
 ## Education
 
-Computer Science and Information Engineering |
-**National Taiwan University** | *Sep 2022 ~ Present*
+#### National Taiwan University
+
+Computer Science and Information Engineering
+
+*Sep 2022 ~ Present*
 
 ## Skills
 
@@ -86,10 +89,21 @@ Django                      | Beginner
 Qt                          | Beginner
 Jekyll                      | Beginner
 Linux                       | Beginner
+Computer Vision             | Beginner
+
+## Honors and Awards
+
+#### 2024 [Innovation Game Design](https://igd.gamelab.com.tw/) - Best Innovation Award, Honorable Mention
+
+*Jan 2024*
+
+Entry: [Time Factory](https://icya.itch.io/time-factory) \| *Aug 2023 ~ Jan 2024*
 
 ## Work Experience
 
-2023 [APCS Camp](https://apcs.camp/) Teaching Asistant | *Jul 2023 ~ Aug 2023*
+#### 2023 [APCS Camp](https://apcs.camp/) Teaching Asistant
+
+*Jul 2023 ~ Aug 2023*
 
 ## About Me
 

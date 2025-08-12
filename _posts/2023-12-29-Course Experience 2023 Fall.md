@@ -50,7 +50,7 @@ tags: [Course Experience, NTU]
 
 ### 系統程式設計 System Programming
 
-- 教師：黎世偉
+- 教師：黎世瑋
 - 學分：3
 - 成績：A
 - 甜度：<span class="clr-gold">★★★★★★★★</span>☆☆
