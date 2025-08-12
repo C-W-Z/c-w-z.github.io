@@ -176,9 +176,11 @@ http://some_http_link is not an HTTPS link
 ```yml
 run: |
     bundle exec htmlproofer _site \
-    \-\-disable-external=true \
-    \-\-enforce_https=false \ # 我自己是加上這一行
-    \-\-ignore-urls "/^http:\/\/127.0.0.1/,/^http:\/\/0.0.0.0/,/^http:\/\/localhost/"
+    \-\-disable-external \
+    \-\-ignore-urls "/^http:\/\/127.0.0.1/,/^http:\/\/0.0.0.0/,/^http:\/\/localhost/" \
+    \-\-no-enforce-https \ # 我自己是加上這三行
+    \-\-ignore-empty-alt \
+    \-\-allow_missing_href
 ```
 {: file='.github\workflows\pages-deploy.yml' }
 
