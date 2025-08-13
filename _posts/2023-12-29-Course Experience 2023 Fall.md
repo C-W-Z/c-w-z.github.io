@@ -197,8 +197,7 @@ tags: [Course Experience, NTU]
 通識：14/12 [A1 A2 A3 <mark>A5</mark> <mark>A8</mark>]
 
 不計入畢業學分：
-
-體育：1/4
+- 體育：1/4
 - 服務學習：❌
 - 進階英語：免修
 
