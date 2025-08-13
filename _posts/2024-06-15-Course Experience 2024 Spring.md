@@ -3,7 +3,7 @@ title: 大二下修課紀錄
 description: 原本要寫心得的，但後來懶得寫就變成修課紀錄了
 author: cwz
 date: 2024-06-15 21:23:35 +0800
-last_modified_at: 2024-08-12 20:03:00 +0800
+last_modified_at: 2025-08-13 09:44:00 +0800
 categories: [NTU, Course Experience]
 tags: [Course Experience, NTU]
 ---
@@ -128,6 +128,6 @@ tags: [Course Experience, NTU]
 - 服務學習：❌
 - 進階英語：免修
 
-總計：87/128 (+22)
+總計：86/128 (+21)
 
 本學期GPA: 4.23
