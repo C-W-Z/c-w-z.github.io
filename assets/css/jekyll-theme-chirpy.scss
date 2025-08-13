@@ -1,7 +1,12 @@
 ---
 ---
 
-@use 'main';
+/* prettier-ignore */
+@use 'main
+{%- if jekyll.environment == 'production' -%}
+  .bundle
+{%- endif -%}
+';
 
 /* append your custom style below */
 
@@ -99,7 +104,7 @@ main {
   h2 {
     font-family: 'EB Garamond', 'LXGW Bold', 'Microsoft-Yahei';
     font-weight: 500;
-    // position: relative;
+    position: relative;
   }
   h2::before {
     content: '§';
@@ -118,8 +123,8 @@ main {
   ul,
   ol {
     font-family: 'LXGW Regular', 'Poppins', 'Microsoft-Yahei';
-    // line-height: 1.9em;
-    // letter-spacing: 0.03em;
+    line-height: 1.9em;
+    letter-spacing: 0.03em;
   }
   .content a,
   .categories a,
@@ -155,7 +160,7 @@ main {
 
 #panel-wrapper .panel-heading {
   font-family: 'EB Garamond', 'LXGW Bold', 'Microsoft-Yahei';
-  // font-size: 1.2rem;
+  font-size: 1.2rem;
 }
 
 #topbar #breadcrumb,
@@ -163,52 +168,54 @@ main {
   font-family: 'Ubuntu', 'LXGW Regular', 'Microsoft-Yahei';
 }
 
-// #tail-wrapper .btn.btn-outline-primary {
-//     border: none;
-// }
+#tail-wrapper .btn.btn-outline-primary {
+  border: none;
+}
 
-// #about-links {
-//     svg {
-//         fill:var(--text-color);
-//         height:1em;
-//         width:1rem;
-//     }
-//     a {
-//         text-decoration: none;
-//         border-bottom: none;
-//         margin-right: 0.5em;
-//         user-select: none;
-//     }
-//     a:hover svg {
-//             fill:var(--sidebar-active-color);
-//     }
-// }
+#about-links {
+  svg {
+    fill: var(--text-color);
+    height: 1em;
+    width: 1rem;
+  }
+  a {
+    text-decoration: none;
+    border-bottom: none;
+    margin-right: 0.5em;
+    user-select: none;
+  }
+  a:hover svg {
+    fill: var(--sidebar-active-color);
+  }
+}
 
-// #about-meta {
-//     time, em, a {
-//         color: var(--text-muted-hightlight-color);
-//         font-weight: 600;
-//         border-bottom: none;
-//     }
-//     span+span::before {
-//         content: "•";
-//         padding-left: 0.25rem;
-//         padding-right: 0.25rem;
-//     }
-// }
+#about-meta {
+  time,
+  em,
+  a {
+    color: var(--text-muted-hightlight-color);
+    font-weight: 600;
+    border-bottom: none;
+  }
+  span + span::before {
+    content: '•';
+    padding-left: 0.25rem;
+    padding-right: 0.25rem;
+  }
+}
 
 mjx-math {
   user-select: none;
 }
 
-// .edgeLabel:not(:empty) {
-//     border-radius: 5px;
-//     padding: 5px;
-// }
+.edgeLabel:not(:empty) {
+  border-radius: 5px;
+  padding: 5px;
+}
 
-// .footnotes {
-//     border-top: 2px solid #999999;
-// }
+.footnotes {
+  border-top: 2px solid #999999;
+}
 
 /* custom classes used in markdown */
 .txt-r {
